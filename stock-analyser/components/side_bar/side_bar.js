@@ -1,5 +1,8 @@
 import SearchBar from 'material-ui-search-bar'
+import { ThemeProvider } from '@material-ui/core/styles'
+import { CssBaseline } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
+import baseButtonTheme from '../../styles/mui_themes'
 import Aux from '../../utils/aux'
 
 export default function SideBar() {
@@ -14,22 +17,20 @@ export default function SideBar() {
                 // onChange={(newValue) => onValueChanged(newValue)}
                 // disabled={showSelectedCompanies} 
             />
-             <Button
-             // TODO: Fix style hree
-                // style={{ 
-                //     position: 'absolute',
-                //     width: '200px', 
-                //     height: '50px',
-                    // bottom: showSelectedCompanies ? '260px' : '50px',
-                    // zIndex: 2,
-                    // backgroundColor: showSelectedCompanies ? '#859AB9' : '#5478AA',
-                    // fontSize: '12px',
-                    // color: 'white'}}
-                    // onClick={() => setShowSelectedCompanies(!showSelectedCompanies)}
-                    //{selectedCompanies.length}
-                    >
-                    companies selected
-            </Button>  
+            <ThemeProvider theme={baseButtonTheme}>
+                <CssBaseline />
+                <Button color='primary'>x companies selected</Button>  
+            </ThemeProvider>
         </Aux>
     )
 }
+
+
+// Previous button attributes
+
+//     position: 'absolute',
+// bottom: showSelectedCompanies ? '260px' : '50px',
+// zIndex: 2,
+// backgroundColor: showSelectedCompanies ? '#859AB9' : '#5478AA',
+// onClick={() => setShowSelectedCompanies(!showSelectedCompanies)}
+//{selectedCompanies.length}

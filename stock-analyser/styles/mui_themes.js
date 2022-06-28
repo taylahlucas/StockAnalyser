@@ -1,22 +1,21 @@
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
+import { createTheme } from "@material-ui/core/styles";
 
-// TODO: Fix mui themes
-const standardButtonDisabled = createMuiTheme({
+const baseButtonTheme = createTheme({
     overrides: {
         MuiButton: {
             root: {
+                width: 200,
+                height: 40,
+                background: '#2F2A36',
                 "& $label": {
                     fontFamily: "Avenir Next",
-                    fontSize: '14px',
+                    fontSize: 14,
                     color: '#E9E9E9',
                     textDecoration: "uppercased"
                 }
             }
-        },
-        palette: {
-            primary: {
-                main: "#2F2A36"
-            }
         }
     }
 })
+
+export default baseButtonTheme
