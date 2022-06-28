@@ -114,3 +114,62 @@
     flex-direction: column;
   }
 }
+
+/* Font Faces */
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("http://www.yoursite.com/fonts/Avenir_Next.otf"); /* File to be stored at your site */
+}
+
+/* Background Colors */
+
+.lightGreyBackground { background-color: '#2F2A36'; }
+.midGreyBackground { background-color: '#1C1D24'; }
+.darkGreyBackground { background-color: '#14131A'; }
+
+/* Text Colors */
+
+.lightTextColour { color: '#E9E9E9'; }
+.darkTextColour { color: '#727276'; }
+
+/* Contrasting Colors */
+
+.lightPurpleBackground { background: '#6669EA'; }
+.tealBackground { background: '#79D1BF'; }
+
+/* Heading Styles */
+
+.heading {
+  font-family: 'Avenir Next';
+  font-weight: bold;
+  font-size: 50px; 
+  background-color: 'red';
+  color: 'red';
+}
+
+.tableHeading {
+  font-family: 'Avenir Next';
+  font-weight: medium;
+  font-size: 20px; 
+}
+
+.tableCellText {
+  font-family: 'Avenir Next';
+  font-size: 20px; 
+}
+
+.sectionHeading {
+  font-family: 'Avenir Next';
+  font-size: 16px; 
+}
+
+.smallHeading {
+  font-family: 'Avenir Next';
+  font-size: 14px; 
+}
+
+.listCellText {
+  font-family: 'Avenir Next';
+  font-size: 12px; 
+}
