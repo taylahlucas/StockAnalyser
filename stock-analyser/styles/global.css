@@ -11,6 +11,8 @@
 .midGreyBackground { background-color: #1C1D24; }
 .darkGreyBackground { background-color: #14131A; }
 
+.test { background-color: yellow; } 
+
 /* Text Colors */
 
 .lightTextColour { color: #E9E9E9; }
@@ -23,18 +25,25 @@
 
 /* Positions */
 
-.absolute { position: absolute; }
-.relative { position: relative; }
 .fixed { position: fixed; }
+.center { text-align: center; }
 
 /* Widths & Heights */
 
-.width200 { width: 400px; }
+.height30 { height: 30px; }
+.height100p { height: 100%; }
 
-/* Margins */
+.width100 { width: 100px; }
 
-.marginLeft0 { margin-left: 0px; }
-.marginLeft20 { margin-left: 20px; }
+/* Padding */
+
+.paddingTop20 { padding-top: 20px; }
+
+.paddingLeft10 { padding-left: 10px; }
+
+/* Margin */
+
+.paddingTop10 { padding-top: 10px; }
 
 /* Heading Styles */
 
@@ -74,8 +83,8 @@
 
 .searchBar {
   margin-top: 50px;
-  margin-right: 10px;
-  margin-left: 10px;
-  width: 280px;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 350px;
   max-height: 30px;
 }
