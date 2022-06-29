@@ -21,6 +21,21 @@
 .lightPurpleBackground { background: #6669EA; }
 .tealBackground { background: #79D1BF; }
 
+/* Positions */
+
+.absolute { position: absolute; }
+.relative { position: relative; }
+.fixed { position: fixed; }
+
+/* Widths & Heights */
+
+.width200 { width: 400px; }
+
+/* Margins */
+
+.marginLeft0 { margin-left: 0px; }
+.marginLeft20 { margin-left: 20px; }
+
 /* Heading Styles */
 
 .heading {
@@ -64,16 +79,3 @@
   width: 280px;
   max-height: 30px;
 }
-
-.Mui-active {
-  color: black;
-  background-color: yellow;
-}
-
-/* Widths & Heights */
-
-.width200 { width: 200px; }
-
-/* Margins */
-
-.marginLeft0 { margin-left: 0px; }
