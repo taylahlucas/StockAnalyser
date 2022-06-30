@@ -1,11 +1,26 @@
+import { useState, useEffect } from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { CssBaseline } from '@material-ui/core'
 import baseButtonTheme from '../../styles/mui_themes'
 import Button from '@material-ui/core/Button'
 import SearchBar from 'material-ui-search-bar'
+
 import CompanyList from './company_list'
+import AsxIndustryGroups from '../../data/asx_industry_groups'
+import mockCompanies from '../../data/asx_mock_company_data'
 
 export default function SideBar() {
+    const [industries, setIndustries] = useState([])
+    const [companies, setCompanies] = useState(mockCompanies)
+
+    useEffect(() => {
+        const industries = []
+        for (const [industry] of Object.entries(AsxIndustryGroups)) {
+          industries.push(industry)
+        }
+        setIndustries(industries)
+      }, [])
+
     return (
         <div className='fixed height100p midGreyBackground'>
             <div className='container paddingTop20'>
@@ -22,7 +37,7 @@ export default function SideBar() {
                     />
                 </div>
                 <div class='row-sm-4 d-flex justify-content-center'>
-                    <CompanyList />
+                    <CompanyList industries={industries} />
                 </div>
                 <div class='row-sm-4 d-flex justify-content-center'>
                     <div className='absolute height30 paddingTop10'>

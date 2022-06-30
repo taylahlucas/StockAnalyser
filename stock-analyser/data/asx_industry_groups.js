@@ -35,4 +35,4 @@ const AsxIndustryGroups = {
     }
 }
 
-export default AsxIndustryGroups;
+export default AsxIndustryGroups
