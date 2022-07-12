@@ -6,16 +6,15 @@ import { useStore, wrapper } from '../redux/store';
 
 
 function StockAnalyserApp({ Component, pageProps }) {
-  const store = useStore(pageProps.initialReduxState)
   // Import bootsrap here to work with components that use Javascript
   useEffect(() => {
     import('bootstrap/dist/js/bootstrap')
   }, []);
 
   return (    
-    <Provider store={store}>
+    <div>
       <Component {...pageProps} />
-    </Provider>
+    </div>
     )
 }
 

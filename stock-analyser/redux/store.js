@@ -20,4 +20,4 @@ export const store = createStore(
 // Assignment store to next wrappper
 const makeStore = () => store
 
-export const wrapper = createWrapper(makStore)
+export const wrapper = createWrapper(makeStore)
