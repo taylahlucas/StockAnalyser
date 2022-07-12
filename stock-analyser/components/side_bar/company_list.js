@@ -27,9 +27,11 @@ export default function CompanyList(props) {
     return (
         <div>
             {industries.map((item) => {
+                console.log("ITEM: ", AsxIndustryGroups[item])
                 return <IndustryGroupItem 
                     key={item}
-                    title={AsxIndustryTitles[item]} />
+                    title={AsxIndustryTitles[item]}
+                    items={AsxIndustryGroups[item]} />
             })}
         </div>
     )

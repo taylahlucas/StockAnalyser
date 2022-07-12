@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { ThemeProvider } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
+import List from '@material-ui/core/List'
+import ListItemText from '@material-ui/core/ListItemText'
+import AsxIndustryGroups from '../../data/asx_industry_groups'
 
-import baseButtonTheme from '../../styles/mui_themes'
-import { CssBaseline } from '@material-ui/core'
 
 const propTypes = {
     title: PropTypes.string,
@@ -17,10 +16,14 @@ const defaultProps = {
 }
 
 const IndustrySectionItem = (props) => {
+    const [industrySections, setIndustrySections] = useState(Object.keys(AsxIndustryGroups))
+    // Need to create drop down
     return(
-        <div>
-
-        </div>
+        <List>
+            {props.industries.map((item) => {
+                return <ListItemText primary={item.value} />
+            })}
+        </List>
     )
 }
 

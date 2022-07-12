@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
-
-import baseButtonTheme from '../../styles/mui_themes'
 import { CssBaseline } from '@material-ui/core'
+import Button from '@material-ui/core/Button'
+import List from '@material-ui/core/List'
+import ListItemText from '@material-ui/core/ListItemText'
+
+import Aux from '../../utils/aux'
+import baseButtonTheme from '../../styles/mui_themes'
+import AsxIndustryGroups from '../../data/asx_industry_groups'
 
 const propTypes = {
     title: PropTypes.string,
@@ -18,13 +22,23 @@ const defaultProps = {
 
 const IndustryGroupItem = (props) => {
     const [isOpen, setOpenMenu] = useState(false)
+    const [industrySections, setIndustrySections] = useState(Object.keys(AsxIndustryGroups))
 
     return(
         <div className='row-sm-4 d-flex justify-content-center paddingTop20'>
-            <ThemeProvider theme={baseButtonTheme}>
-                <CssBaseline />
-                <Button>{props.title}</Button>
-            </ThemeProvider>
+            <Aux>
+                <ThemeProvider theme={baseButtonTheme}>
+                    <CssBaseline />
+                    <Button>{props.title}</Button>
+                </ThemeProvider>
+                <List
+                    sx={{ width: '100%', maxWidth: 360 }}
+                    component='nav'>
+                    {industrySections.map((item) => {
+                        return <ListItemText primary={item.value} />
+                    })}
+                </List>
+            </Aux>
         </div>
     )
 }
