@@ -1,10 +1,55 @@
-import List from '@material-ui/core/List'
+import AsxIndustryGroups from '../../data/companies/ASXIndustryGroups'
+import AsxIndustryTitles from '../../data/companies/ASXIndustryTitles'
 
-// https://smartdevpreneur.com/how-to-add-filtering-subheader-and-styling-to-the-material-ui-list-component/
-// https://mui.com/material-ui/api/list/
+const propTypes = {
+    companies: PropTypes.arrayOf(PropTypes.object),
+    industries: PropTypes.arrayOf(PropTypes.string),
+    searchResults: PropTypes.arrayOf(PropTypes.object)
+}
+
+const defaultProps = {
+    companies: null,
+    industries: null,
+    searchResults: null
+}
+
 export default function CompanyList(props) {
-    // TODO: Add mock list and style
+    const [activeMenu, setMenu] = useState(undefined)
+
+    const setActiveMenu = (menu) => {
+        setMenu(menu)
+    }
+    
     return (
-        <List />
+        <div>
+            {props.industries.map((item) => {
+                const companyItems = props.companies.filter((companyItem) => {
+                    for (let sector in AsxIndustryGroups[item]) {
+                        if (companyItem.sector === AsxIndustryGroups[item][sector]) {
+                            if (props.searchResults.length > 0) {
+                                if (props.searchResults.includes(companyItem)) {
+                                    return companyItem
+                                }
+                            }
+                            else {
+                                return companyItem
+                            }
+                        }
+                    }
+                })
+                // Menu Item
+                if (companyItems.length > 0) {
+                    return <DropDownItem 
+                        key={item}
+                        title={AsxIndustryTitles[item]} 
+                        items={companyItems}
+                        onAddCompany={(item) => props.onCompanyAdded(item)}
+                        onRemoveCompany={(item) => props.onCompanyRemoved(item)}
+                        setActiveMenu={(menu) => setActiveMenu(menu)}
+                        isOpen={activeMenu === AsxIndustryTitles[item] ? true : false}
+                        disabled={props.disabled} />
+                }
+            })}
+        </div>
     )
 }
