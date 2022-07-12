@@ -1,5 +1,7 @@
-import AsxIndustryGroups from '../../data/companies/ASXIndustryGroups'
-import AsxIndustryTitles from '../../data/companies/ASXIndustryTitles'
+import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
+import AsxIndustryGroups from '../../data/asx_industry_groups'
+import AsxIndustryTitles from '../../data/asx_industry_titles'
 
 const propTypes = {
     companies: PropTypes.arrayOf(PropTypes.object),
@@ -22,34 +24,35 @@ export default function CompanyList(props) {
     
     return (
         <div>
-            {props.industries.map((item) => {
-                const companyItems = props.companies.filter((companyItem) => {
-                    for (let sector in AsxIndustryGroups[item]) {
-                        if (companyItem.sector === AsxIndustryGroups[item][sector]) {
-                            if (props.searchResults.length > 0) {
-                                if (props.searchResults.includes(companyItem)) {
-                                    return companyItem
-                                }
-                            }
-                            else {
-                                return companyItem
-                            }
-                        }
-                    }
-                })
-                // Menu Item
-                if (companyItems.length > 0) {
-                    return <DropDownItem 
-                        key={item}
-                        title={AsxIndustryTitles[item]} 
-                        items={companyItems}
-                        onAddCompany={(item) => props.onCompanyAdded(item)}
-                        onRemoveCompany={(item) => props.onCompanyRemoved(item)}
-                        setActiveMenu={(menu) => setActiveMenu(menu)}
-                        isOpen={activeMenu === AsxIndustryTitles[item] ? true : false}
-                        disabled={props.disabled} />
-                }
-            })}
         </div>
     )
 }
+
+// {props.industries.map((item) => {
+//     const companyItems = props.companies.filter((companyItem) => {
+//         for (let sector in AsxIndustryGroups[item]) {
+//             if (companyItem.sector === AsxIndustryGroups[item][sector]) {
+//                 if (props.searchResults.length > 0) {
+//                     if (props.searchResults.includes(companyItem)) {
+//                         return companyItem
+//                     }
+//                 }
+//                 else {
+//                     return companyItem
+//                 }
+//             }
+//         }
+//     })
+//     // Menu Item
+//     if (companyItems.length > 0) {
+//         return <DropDownItem 
+//             key={item}
+//             title={AsxIndustryTitles[item]} 
+//             items={companyItems}
+//             onAddCompany={(item) => props.onCompanyAdded(item)}
+//             onRemoveCompany={(item) => props.onCompanyRemoved(item)}
+//             setActiveMenu={(menu) => setActiveMenu(menu)}
+//             isOpen={activeMenu === AsxIndustryTitles[item] ? true : false}
+//             disabled={props.disabled} />
+//     }
+// })}

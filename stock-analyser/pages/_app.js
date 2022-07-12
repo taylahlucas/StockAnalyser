@@ -1,7 +1,6 @@
 import '../styles/global.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect } from 'react'
-import { Provider } from 'react-redux'
 import { useStore, wrapper } from '../redux/store';
 
 
@@ -18,4 +17,4 @@ function StockAnalyserApp({ Component, pageProps }) {
     )
 }
 
-export default wrapper.withRedux(StockAnalyserApp)
+export default StockAnalyserApp
