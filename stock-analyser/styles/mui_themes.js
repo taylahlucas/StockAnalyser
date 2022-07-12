@@ -4,7 +4,7 @@ const baseButtonTheme = createTheme({
     overrides: {
         MuiButton: {
             root: {
-                width: 200,
+                width: 300,
                 height: 40,
                 background: '#2F2A36',
                 "& $label": {

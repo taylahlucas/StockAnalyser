@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
+import IndustryGroupItem from './industry_group_item'
 import AsxIndustryGroups from '../../data/asx_industry_groups'
 import AsxIndustryTitles from '../../data/asx_industry_titles'
 
@@ -17,6 +18,7 @@ const defaultProps = {
 
 export default function CompanyList(props) {
     const [activeMenu, setMenu] = useState(undefined)
+    const [industries, setIndustries] = useState(Object.keys(AsxIndustryGroups))
 
     const setActiveMenu = (menu) => {
         setMenu(menu)
@@ -24,6 +26,11 @@ export default function CompanyList(props) {
     
     return (
         <div>
+            {industries.map((item) => {
+                return <IndustryGroupItem 
+                    key={item}
+                    title={AsxIndustryTitles[item]} />
+            })}
         </div>
     )
 }

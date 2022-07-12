@@ -24,39 +24,30 @@ export default function SideBar() {
     return (
         <div className='fixed height100p midGreyBackground'>
             <div className='container paddingTop20'>
-                <div class='row paddingLeft10'>
+                <div className='row paddingLeft10'>
                     <h1 className='heading lightTextColour'
                         onClick={() => Router.push('/company_search')}>StockAnalyser.</h1>
                 </div>
-                <div class='row-sm-4 d-flex justify-content-center'>
+                <div className='row-sm-4 d-flex justify-content-center'>
                     <SearchBar className='searchBar'
                         placeholder='Search companies...'
+                        style={{ width: '300px' }}
                         // value={value}
                         // onChange={(newValue) => onValueChanged(newValue)}
                         // disabled={showSelectedCompanies} 
                     />
                 </div>
-                <div class='row-sm-4 d-flex justify-content-center'>
+                <div className='row-sm-4 d-flex justify-content-center'>
                     <CompanyList industries={industries} />
                 </div>
-                <div class='row-sm-4 d-flex justify-content-center'>
-                    <div className='absolute height30 paddingTop10'>
-                        <ThemeProvider theme={baseButtonTheme}>
-                            <CssBaseline />
-                            <Button color='primary'>x companies selected</Button>  
-                        </ThemeProvider>
-                    </div>
+                {/* TODO: Add Companies Selected box */}
+                <div className='row-sm-4 d-flex justify-content-center paddingTop60'>
+                    <ThemeProvider theme={baseButtonTheme}>
+                        <CssBaseline />
+                        <Button>x companies selected</Button>  
+                    </ThemeProvider>
                 </div>
             </div>
         </div>
     )
 }
-
-
-// Previous button attributes
-//     position: 'absolute',
-// bottom: showSelectedCompanies ? '260px' : '50px',
-// zIndex: 2,
-// backgroundColor: showSelectedCompanies ? '#859AB9' : '#5478AA',
-// onClick={() => setShowSelectedCompanies(!showSelectedCompanies)}
-//{selectedCompanies.length}
