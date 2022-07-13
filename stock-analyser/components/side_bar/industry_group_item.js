@@ -1,17 +1,9 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import { ThemeProvider } from '@material-ui/core/styles'
-import { CssBaseline } from '@material-ui/core'
-import Button from '@material-ui/core/Button'
-// import List from '@material-ui/core/List'
-// import ListItemText from '@material-ui/core/ListItemText'
-import { List, ListItemText, ListItem, Collapse } from '@material-ui/core'
-import { ExpandLess, ExpandMore } from '@material-ui/icons'
-// import ExpandMore from '@mui/icons-material/ExpandMore'
+import { List, ListItem } from '@material-ui/core'
 
-import Aux from '../../utils/aux'
-import baseButtonTheme from '../../styles/mui_themes'
-import AsxIndustryGroups from '../../data/asx_industry_groups'
+import ThemedButton from '../buttons/themed_button'
+import IndustrySectionsList from '../side_bar/industry_sections_list'
 
 const propTypes = {
     title: PropTypes.string,
@@ -25,33 +17,16 @@ const defaultProps = {
 
 const IndustryGroupItem = (props) => {
     const [isOpen, setOpenMenu] = useState(false)
-    // const [industrySections, setIndustrySections] = useState(Object.entries(AsxIndustryGroups))
-    
+
     return(
-        <Aux>
-            <ThemeProvider theme={baseButtonTheme}>
-                <CssBaseline />
-                <Button onClick={() => setOpenMenu(!isOpen)}>{props.title}</Button>
-            </ThemeProvider>
-            <List>
-                {props.items.map((sector) => {
-                    {Object.values(sector).map((item) => {
-                        console.log("ITEM: " + isOpen)
-                        return <ListItem button>
-                            <ListItemText primary={item} />
-                            {isOpen ? <ExpandMore /> : <ExpandLess />}
-                            <Collapse in={isOpen} timeout='auto' unmountOnExit>
-                                <List component='div' disablePadding>
-                                    <ListItem button sx={{ pl: 4 }}>
-                                        <ListItemText primary='Company Name' />
-                                    </ListItem>
-                                </List>
-                            </Collapse>
-                        </ListItem>
-                    })}
-                })}
-            </List>
-        </Aux>
+        <List>
+            <ListItem>
+                <ThemedButton title={props.title} onClick={() => setOpenMenu(!isOpen)} />
+            </ListItem>
+            <ListItem>
+                <IndustrySectionsList items={props.items} isOpen={isOpen} />
+            </ListItem>
+        </List>
     )
 }
 

@@ -1,11 +1,8 @@
 import { useState, useEffect } from 'react'
-import { ThemeProvider } from '@material-ui/core/styles'
-import { CssBaseline } from '@material-ui/core'
-import baseButtonTheme from '../../styles/mui_themes'
-import Button from '@material-ui/core/Button'
 import SearchBar from 'material-ui-search-bar'
 
-import CompanyList from './company_list'
+import ThemedButton from '../buttons/themed_button'
+import IndustryGroupList from './industry_group_list'
 import AsxIndustryGroups from '../../data/asx_industry_groups'
 import mockCompanies from '../../data/asx_mock_company_data'
 
@@ -38,14 +35,11 @@ export default function SideBar() {
                     />
                 </div>
                 <div className='row-sm-4 d-flex justify-content-center'>
-                    <CompanyList industries={industries} />
+                    <IndustryGroupList industries={industries} />
                 </div>
                 {/* TODO: Add Companies Selected box */}
                 <div className='row-sm-4 d-flex justify-content-center paddingTop60'>
-                    <ThemeProvider theme={baseButtonTheme}>
-                        <CssBaseline />
-                        <Button>x companies selected</Button>  
-                    </ThemeProvider>
+                    <ThemedButton title='x companies selected'/>
                 </div>
             </div>
         </div>
