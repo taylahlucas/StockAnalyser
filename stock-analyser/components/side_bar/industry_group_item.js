@@ -3,8 +3,11 @@ import React, { useState } from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { CssBaseline } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
-import List from '@material-ui/core/List'
-import ListItemText from '@material-ui/core/ListItemText'
+// import List from '@material-ui/core/List'
+// import ListItemText from '@material-ui/core/ListItemText'
+import { List, ListItemText, ListItem, Collapse } from '@material-ui/core'
+import { ExpandLess, ExpandMore } from '@material-ui/icons'
+// import ExpandMore from '@mui/icons-material/ExpandMore'
 
 import Aux from '../../utils/aux'
 import baseButtonTheme from '../../styles/mui_themes'
@@ -22,24 +25,33 @@ const defaultProps = {
 
 const IndustryGroupItem = (props) => {
     const [isOpen, setOpenMenu] = useState(false)
-    const [industrySections, setIndustrySections] = useState(Object.keys(AsxIndustryGroups))
-
+    // const [industrySections, setIndustrySections] = useState(Object.entries(AsxIndustryGroups))
+    
     return(
-        <div className='row-sm-4 d-flex justify-content-center paddingTop20'>
-            <Aux>
-                <ThemeProvider theme={baseButtonTheme}>
-                    <CssBaseline />
-                    <Button>{props.title}</Button>
-                </ThemeProvider>
-                <List
-                    sx={{ width: '100%', maxWidth: 360 }}
-                    component='nav'>
-                    {industrySections.map((item) => {
-                        return <ListItemText primary={item.value} />
+        <Aux>
+            <ThemeProvider theme={baseButtonTheme}>
+                <CssBaseline />
+                <Button onClick={() => setOpenMenu(!isOpen)}>{props.title}</Button>
+            </ThemeProvider>
+            <List>
+                {props.items.map((sector) => {
+                    {Object.values(sector).map((item) => {
+                        console.log("ITEM: " + isOpen)
+                        return <ListItem button>
+                            <ListItemText primary={item} />
+                            {isOpen ? <ExpandMore /> : <ExpandLess />}
+                            <Collapse in={isOpen} timeout='auto' unmountOnExit>
+                                <List component='div' disablePadding>
+                                    <ListItem button sx={{ pl: 4 }}>
+                                        <ListItemText primary='Company Name' />
+                                    </ListItem>
+                                </List>
+                            </Collapse>
+                        </ListItem>
                     })}
-                </List>
-            </Aux>
-        </div>
+                })}
+            </List>
+        </Aux>
     )
 }
 

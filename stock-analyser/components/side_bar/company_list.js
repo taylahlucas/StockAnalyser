@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
+import { ThemeProvider } from '@material-ui/core/styles'
+import { CssBaseline } from '@material-ui/core'
 import IndustryGroupItem from './industry_group_item'
 import AsxIndustryGroups from '../../data/asx_industry_groups'
 import AsxIndustryTitles from '../../data/asx_industry_titles'
+import baseButtonTheme from '../../styles/mui_themes'
+
+import { List, ListItemText, ListItem, Collapse } from '@material-ui/core'
 
 const propTypes = {
     companies: PropTypes.arrayOf(PropTypes.object),
@@ -23,18 +28,26 @@ export default function CompanyList(props) {
     const setActiveMenu = (menu) => {
         setMenu(menu)
     }
-    
+
     return (
-        <div>
-            {industries.map((item) => {
-                console.log("ITEM: ", AsxIndustryGroups[item])
-                return <IndustryGroupItem 
-                    key={item}
-                    title={AsxIndustryTitles[item]}
-                    items={AsxIndustryGroups[item]} />
-            })}
-        </div>
+        <List>
+            <ThemeProvider theme={baseButtonTheme}>
+            <CssBaseline />
+                <ListItem button>test</ListItem>
+            </ThemeProvider>
+        </List>
     )
+    
+    // return (
+    //     <List style={{ paddingTop: 20 }} component='nav'>
+    //         {industries.map((item) => {                
+    //             return <IndustryGroupItem 
+    //                 key={item}
+    //                 title={AsxIndustryTitles[item]}
+    //                 items={[AsxIndustryGroups[item]]} />
+    //         })}
+    //     </List>
+    // )
 }
 
 // {props.industries.map((item) => {
