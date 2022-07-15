@@ -10,6 +10,7 @@ export default function SideBar() {
     const [industries, setIndustries] = useState([])
     const [companies, setCompanies] = useState(mockCompanies)
 
+    // Set industries
     useEffect(() => {
         const industries = []
         for (const [industry] of Object.entries(AsxIndustryGroups)) {

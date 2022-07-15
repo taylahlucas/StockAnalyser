@@ -24,7 +24,7 @@ const AsxIndustryGroups = {
     },
     FINANCIALS: {
         BANKS: 'Banks',
-        DIVERSIFIED_FINANCIALS: 'Diversidied Financials'
+        DIVERSIFIED_FINANCIALS: 'Diversified Financials'
     },
     INFORMATION_TECHNOLOGY: {
         TECHNOLOGY: 'Technology, Hardware & Equiptment',

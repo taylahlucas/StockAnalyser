@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
-import React, { useState } from 'react'
-import { List, ListItem } from '@material-ui/core'
+import React, { useState, useRef } from 'react'
+import { List, ListItem, Collapse } from '@material-ui/core'
 
 import ThemedButton from '../buttons/themed_button'
-import IndustrySectionsList from '../side_bar/industry_sections_list'
+import IndustrySectionItem from './industry_section_item'
 
 const propTypes = {
     title: PropTypes.string,
-    items: PropTypes.arrayOf(PropTypes.object),
+    items: PropTypes.object,
     isOpen: PropTypes.bool
 }
 
@@ -16,6 +16,8 @@ const defaultProps = {
 }
 
 const IndustryGroupItem = (props) => {
+    // TODO: Fix ref between industry_group_list and industry_group_item
+    const inputRef = useRef(null)
     const [isOpen, setOpenMenu] = useState(false)
 
     return(
@@ -23,9 +25,9 @@ const IndustryGroupItem = (props) => {
             <ListItem>
                 <ThemedButton title={props.title} onClick={() => setOpenMenu(!isOpen)} />
             </ListItem>
-            <ListItem>
-                <IndustrySectionsList items={props.items} isOpen={isOpen} />
-            </ListItem>
+            <Collapse in={isOpen}>
+                <IndustrySectionItem items={props.items} />
+            </Collapse>
         </List>
     )
 }
