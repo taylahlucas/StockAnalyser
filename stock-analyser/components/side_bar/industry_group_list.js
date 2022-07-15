@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import IndustryGroupItem from './industry_group_item'
 import AsxIndustryGroups from '../../data/asx_industry_groups'
 import AsxIndustryTitles from '../../data/asx_industry_titles'
@@ -6,11 +6,9 @@ import AsxIndustryTitles from '../../data/asx_industry_titles'
 import List from '@material-ui/core/List'
 
 export default function IndustryGroupList() {
-    const [industries, setIndustries] = useState(Object.keys(AsxIndustryGroups))
-
     return (
-        <List>
-            {industries.map((item) => {                
+        <List style={{ paddingTop: 10 }}>
+            {Object.keys(AsxIndustryGroups).map((item) => {                
                 return <IndustryGroupItem 
                     key={item}
                     title={AsxIndustryTitles[item]}

@@ -1,6 +1,6 @@
 import { createTheme } from "@material-ui/core/styles";
 
-const baseButtonTheme = createTheme({
+const baseThemes = createTheme({
     overrides: {
         MuiButton: {
             root: {
@@ -18,19 +18,19 @@ const baseButtonTheme = createTheme({
         },
         MuiListItem: {
             root: {
-                width: 300,
-                height: 40,
-                background: '#2F2A36',
-                borderRadius: 5,
+                width: 280,
+                height: 30,
+                marginLeft: 20,
+                background: '#727276',
                 // Label properties
                 fontFamily: 'Avenir Next',
-                fontSize: 14,
+                fontSize: 10,
                 color: '#E9E9E9',
                 textTransform: 'uppercase',
-                justifyContent: 'center'
+                justifyContent: 'left'
             }
         }
     }
 })
 
-export default baseButtonTheme
+export default baseThemes

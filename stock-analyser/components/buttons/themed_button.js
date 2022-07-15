@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { CssBaseline } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
-import baseButtonTheme from '../../styles/mui_themes'
+import baseThemes from '../../styles/mui_themes'
 
 const propTypes = {
     title: PropTypes.string,
@@ -16,7 +16,7 @@ const defaultProps = {
 
 function ThemedButton(props) {
     return (
-        <ThemeProvider theme={baseButtonTheme}>
+        <ThemeProvider theme={baseThemes}>
             <CssBaseline />
             <Button onClick={props.onClick}>{props.title}</Button>  
         </ThemeProvider>
