@@ -14,7 +14,7 @@ const defaultProps = {
     isOpen: false
 }
 
-const IndustrySectionItem = (props) => {
+const IndustrySectionDropdown = (props) => {
     return(
             <List style={{ marginTop: -10 }}>
                 {Object.values(props.items).map((item) => {
@@ -27,7 +27,7 @@ const IndustrySectionItem = (props) => {
     )
 }
 
-IndustrySectionItem.propTypes = propTypes
-IndustrySectionItem.defaultProps = defaultProps
+IndustrySectionDropdown.propTypes = propTypes
+IndustrySectionDropdown.defaultProps = defaultProps
 
-export default IndustrySectionItem
+export default IndustrySectionDropdown

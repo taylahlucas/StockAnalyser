@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types'
-import React, { useState, useRef } from 'react'
-import { ListItem, Collapse } from '@material-ui/core'
+import React, { useState } from 'react'
+import { Collapse } from '@material-ui/core'
 
-import Aux from '../../utils/aux'
 import ThemedButton from '../buttons/themed_button'
-import IndustrySectionItem from './industry_section_item'
+import IndustrySectionDropdown from './industry_section_dropdown'
 
 const propTypes = {
     title: PropTypes.string,
@@ -16,7 +15,7 @@ const defaultProps = {
     isOpen: false
 }
 
-const IndustryGroupItem = React.forwardRef((props, ref) => {
+const IndustryGroupDropDown = React.forwardRef((props, ref) => {
     // TODO: Fix ref between industry_group_list and industry_group_item
     const [isOpen, setOpenMenu] = useState(false)
 
@@ -24,16 +23,16 @@ const IndustryGroupItem = React.forwardRef((props, ref) => {
         <div className='paddingTop10'>
             <ThemedButton title={props.title} onClick={() => setOpenMenu(!isOpen)} />
             <Collapse in={isOpen}>
-                <IndustrySectionItem items={props.items} />
+                <IndustrySectionDropdown items={props.items} />
             </Collapse>
         </div>
     )
 })
 
-IndustryGroupItem.propTypes = propTypes
-IndustryGroupItem.defaultProps = defaultProps
+IndustryGroupDropDown.propTypes = propTypes
+IndustryGroupDropDown.defaultProps = defaultProps
 
-export default IndustryGroupItem
+export default IndustryGroupDropDown
 
 /* <div 
 style={{ 

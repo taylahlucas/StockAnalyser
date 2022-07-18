@@ -8,6 +8,7 @@ const baseThemes = createTheme({
                 height: 40,
                 background: '#2F2A36',
                 borderRadius: 5,
+                zIndex: 1,
                 '& $label': {
                     fontFamily: 'Avenir Next',
                     fontSize: 14,

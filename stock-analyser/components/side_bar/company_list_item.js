@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import ToggleButton from '../buttons/ToggleButton'
-import Aux from '../aux/Aux'
 
 const propTypes = {
     title: PropTypes.string,
