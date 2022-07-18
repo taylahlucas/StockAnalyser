@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { Collapse } from '@material-ui/core'
 
-import ThemedButton from '../buttons/themed_button'
+import DropdownButton from '../buttons/dropdown_button'
 import IndustrySectionDropdown from './industry_section_dropdown'
 
 const propTypes = {
@@ -20,8 +20,8 @@ const IndustryGroupDropDown = React.forwardRef((props, ref) => {
     const [isOpen, setOpenMenu] = useState(false)
 
     return(
-        <div className='paddingTop10'>
-            <ThemedButton title={props.title} onClick={() => setOpenMenu(!isOpen)} />
+        <div className='center paddingTop10'>
+            <DropdownButton title={props.title} onClick={() => setOpenMenu(!isOpen)} />
             <Collapse in={isOpen}>
                 <IndustrySectionDropdown items={props.items} />
             </Collapse>

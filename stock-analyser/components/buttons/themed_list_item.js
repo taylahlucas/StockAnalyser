@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { CssBaseline } from '@material-ui/core'
-import { ListItem } from '@material-ui/core'
-import baseThemes from '../../styles/mui_themes'
+import { ListItem  } from '@material-ui/core'
+import baseTheme from '../../styles/mui_themes'
 
 const propTypes = {
     title: PropTypes.string,
@@ -16,7 +16,7 @@ const defaultProps = {
 // TODO: Style this to look like designs
 function ThemedListItem(props) {
     return (
-        <ThemeProvider theme={baseThemes}>
+        <ThemeProvider theme={baseTheme}>
             <CssBaseline />
             <ListItem button onClick={props.onClick}>{props.title}</ListItem>  
         </ThemeProvider>
