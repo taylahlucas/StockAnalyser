@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import { Collapse } from '@material-ui/core'
 
 import DropdownButton from '../buttons/dropdown_button'

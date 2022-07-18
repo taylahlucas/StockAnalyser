@@ -1,21 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 
+import mockCompanies from '../../data/asx_mock_company_data'
 import { List } from '@material-ui/core'
 
 const propTypes = {
-    items: PropTypes.object,
+    item: PropTypes.object,
     isOpen: PropTypes.bool
 }
 
 const defaultProps = {
+    item: undefined,
     isOpen: false
 }
 
 const CompanyList = (props) => {
+    const [companies, setCompanies] = useState([])
+
+    useEffect(() => {
+        const filteredCompanies = mockCompanies.filter((item) => {
+            if (item.sector == props.item) {
+                return item
+            }
+        })
+        setCompanies(filteredCompanies)
+    }, [])
+
     return(
         <List>
-            {/* // TODO: Add mock companies + check api */}
+            {Object.values(companies).map((item) => {
+                // Add selectable button (customized TextField)
+                return <div>{item.companyName}</div>
+            })}
         </List>
     )
 }

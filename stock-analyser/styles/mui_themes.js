@@ -1,6 +1,6 @@
 import { createTheme } from "@material-ui/core/styles";
 
-export const baseTheme = createTheme({
+const baseTheme = createTheme({
     overrides: {
         MuiButton: {
             root: {
@@ -16,28 +16,22 @@ export const baseTheme = createTheme({
                     textTransform: 'uppercase'
                 }
             }
+        },
+        MuiListItem: {
+            root: {
+                width: 280,
+                height: 30,
+                marginLeft: 20,
+                background: '#727276',
+                // Label properties
+                fontFamily: 'Avenir Next',
+                fontSize: 10,
+                color: '#E9E9E9',
+                textTransform: 'uppercase',
+                justifyContent: 'left'
+            }
         }
     }
 })
 
-export const secondaryTheme = createTheme({
-	...baseTheme,
-	overrides: {
-		MuiButton: {
-			root: {
-                width: 280,
-                height: 30,
-                marginLeft: 20,
-                borderRadius: 1,
-                background: '#727276',
-                '& $label': {
-                    fontFamily: 'Avenir Next',
-                    fontSize: 10,
-                    color: '#E9E9E9',
-                    textTransform: 'uppercase',
-                    justifyContent: 'left'
-                }
-            }
-		}
-	}
-})
+export default baseTheme

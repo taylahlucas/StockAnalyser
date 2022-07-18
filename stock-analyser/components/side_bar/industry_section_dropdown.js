@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { Collapse, List } from '@material-ui/core'
 
 import ThemedListItem from '../buttons/themed_list_item'
-import { List } from '@material-ui/core'
-import DropdownButton from '../buttons/dropdown_button'
+import CompanyList from './company_list'
 
 
 const propTypes = {
@@ -16,13 +16,22 @@ const defaultProps = {
 }
 
 const IndustrySectionDropdown = (props) => {
+    const [isOpen, setOpenMenu] = useState(false)
+
     return(
             <List style={{ marginTop: -10 }}>
                 {Object.values(props.items).map((item) => {
-                    return <ThemedListItem 
-                        key={item}
-                        title={item}
-                    />
+                    return <div>
+                        <ThemedListItem 
+                            key={item}
+                            title={item}
+                            onClick={() => setOpenMenu(!isOpen)}
+                        />
+                        {/* TODO: Need to only open selected component */}
+                        <Collapse in={isOpen}>
+                            <CompanyList item={item} />
+                        </Collapse>
+                    </div>
                 })}
             </List>
     )
