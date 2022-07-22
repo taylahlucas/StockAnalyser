@@ -1,38 +1,38 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import { Collapse } from '@material-ui/core'
+// import React, { useState } from 'react'
+// import PropTypes from 'prop-types'
+// import { Collapse } from '@material-ui/core'
 
-import DropdownButton from '../buttons/dropdown_button'
-import IndustrySectionDropdown from './industry_section_dropdown'
+// import DropdownButton from '../buttons/dropdown_button'
+// import IndustrySectionDropdown from './industry_section_dropdown'
 
-const propTypes = {
-    title: PropTypes.string,
-    items: PropTypes.object,
-    isOpen: PropTypes.bool
-}
+// const propTypes = {
+//     title: PropTypes.string,
+//     items: PropTypes.object,
+//     isOpen: PropTypes.bool
+// }
 
-const defaultProps = {
-    isOpen: false
-}
+// const defaultProps = {
+//     isOpen: false
+// }
 
-const IndustryGroupDropDown = React.forwardRef((props, ref) => {
-    // TODO: Fix ref between industry_group_list and industry_group_item
-    const [isOpen, setOpenMenu] = useState(false)
+// const IndustryGroupDropDown = React.forwardRef((props, ref) => {
+//     // TODO: Fix ref between industry_group_list and industry_group_item
+//     const [isOpen, setOpenMenu] = useState(false)
 
-    return(
-        <div className='center paddingTop10'>
-            <DropdownButton title={props.title} onClick={() => setOpenMenu(!isOpen)} />
-            <Collapse in={isOpen}>
-                <IndustrySectionDropdown items={props.items} />
-            </Collapse>
-        </div>
-    )
-})
+//     return(
+//         <div className='center paddingTop10'>
+//             <DropdownButton title={props.title} onClick={() => setOpenMenu(!isOpen)} />
+//             <Collapse in={isOpen}>
+//                 <IndustrySectionDropdown items={props.items} />
+//             </Collapse>
+//         </div>
+//     )
+// })
 
-IndustryGroupDropDown.propTypes = propTypes
-IndustryGroupDropDown.defaultProps = defaultProps
+// IndustryGroupDropDown.propTypes = propTypes
+// IndustryGroupDropDown.defaultProps = defaultProps
 
-export default IndustryGroupDropDown
+// export default IndustryGroupDropDown
 
 /* <div 
 style={{ 

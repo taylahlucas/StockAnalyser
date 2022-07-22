@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import SearchBar from 'material-ui-search-bar'
 
 import ThemedButton from '../buttons/themed_button'
-import IndustryGroupList from './industry_group_list'
+import IndustryList from './industry_list'
 import AsxIndustryGroups from '../../data/asx_industry_groups'
 import mockCompanies from '../../data/asx_mock_company_data'
 
@@ -36,7 +36,7 @@ export default function SideBar() {
                     />
                 </div>
                 <div className='row-sm-4 d-flex justify-content-center'>
-                    <IndustryGroupList industries={industries} />
+                    <IndustryList industries={industries} />
                 </div>
                 {/* TODO: Add Companies Selected box */}
                 <div className='row-sm-4 d-flex justify-content-center paddingTop60'>
