@@ -4,17 +4,21 @@ import PropTypes from 'prop-types'
 import mockCompanies from '../../data/asx_mock_company_data'
 import { List } from '@material-ui/core'
 
-const CompanyList = () => {
+const propTypes = {
+    item: PropTypes.object
+}
+// https://stackoverflow.com/questions/60424844/do-i-need-to-run-npm-run-build-every-time-i-made-changes
+function CompanyList(props) {
     const [companies, setCompanies] = useState([])
 
-    // useEffect(() => {
-    //     const filteredCompanies = mockCompanies.filter((item) => {
-    //         if (item.sector == props.item) {
-    //             return item
-    //         }
-    //     })
-    //     setCompanies(filteredCompanies)
-    // }, [])
+    useEffect(() => {
+        const filteredCompanies = mockCompanies.filter((item) => {
+            if (item.sector == props.item) {
+                return item
+            }
+        })
+        setCompanies(filteredCompanies)
+    }, [])
 
     return(
         <List>
@@ -27,7 +31,6 @@ const CompanyList = () => {
     )
 }
 
-// CompanyList.propTypes = propTypes
-// CompanyList.defaultProps = defaultProps
+CompanyList.propTypes = propTypes
 
 export default CompanyList

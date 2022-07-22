@@ -6,7 +6,6 @@ import { List, Collapse } from '@material-ui/core'
 import CompanyList from './company_list'
 import ThemedListItem from '../buttons/themed_list_item'
 
-
 const propTypes = {
     items: PropTypes.object,
     isOpen: PropTypes.bool
@@ -18,9 +17,9 @@ const defaultProps = {
 
 const SectorList = (props) => {
     const [isOpen, setOpenMenu] = useState(false)
-
+    
     return(
-        <List style={{ paddingTop: 10 }}>
+        <List>
             {/* List of sections in industry group */}
             {Object.values(props.items).map((item) => {
                 return  <div key={item}>
@@ -28,7 +27,7 @@ const SectorList = (props) => {
                         title={item}
                         onClick={() => setOpenMenu(!isOpen)}
                     />
-                    {/* TODO: Need to only open selected component */}
+                    {/* TODO: Need to only open selected component -- use ref? */}
                     <Collapse in={isOpen}>
                         <CompanyList item={item} />
                     </Collapse>
