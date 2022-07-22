@@ -15,7 +15,7 @@ const defaultProps = {
     isOpen: false
 }
 
-const IndustryGroupDropDown = React.forwardRef((props, ref) => {
+function IndustryGroupDropDown(props) {
     // TODO: Fix ref between industry_group_list and industry_group_item
     const [isOpen, setOpenMenu] = useState(false)
 
@@ -27,7 +27,7 @@ const IndustryGroupDropDown = React.forwardRef((props, ref) => {
             </Collapse>
         </div>
     )
-})
+}
 
 IndustryGroupDropDown.propTypes = propTypes
 IndustryGroupDropDown.defaultProps = defaultProps

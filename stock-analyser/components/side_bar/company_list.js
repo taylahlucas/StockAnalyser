@@ -30,7 +30,7 @@ const CompanyList = (props) => {
         <List>
             {Object.values(companies).map((item) => {
                 // Add selectable button (customized TextField)
-                return <div>{item.companyName}</div>
+                return <div key={item}>{item.companyName}</div>
             })}
         </List>
     )

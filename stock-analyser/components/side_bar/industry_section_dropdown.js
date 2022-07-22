@@ -21,7 +21,7 @@ const IndustrySectionDropdown = (props) => {
     return(
             <List style={{ marginTop: -10 }}>
                 {Object.values(props.items).map((item) => {
-                    return <div>
+                    return <div key={item}>
                         <ThemedListItem 
                             key={item}
                             title={item}
