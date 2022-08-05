@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 
-import mockCompanies from '../../data/asx_mock_company_data'
+import mockCompanies from '../../../data/asx_mock_company_data'
 import { List } from '@material-ui/core'
 
 const propTypes = {
