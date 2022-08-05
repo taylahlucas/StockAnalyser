@@ -101,7 +101,7 @@ model AsxCompanyModel {
     ]
 }
 
-/* REACT EXAMPLE */
+<!-- /* REACT EXAMPLE */ -->
 
 const asxCompanies = [
     {
