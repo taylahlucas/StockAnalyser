@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { Button, Collapse, CssBaseline } from '@material-ui/core'
-import { baseTheme, secondaryTheme } from '../../styles/mui_themes'
+import { baseTheme, secondaryTheme } from '../../../styles/mui_themes'
 
 const propTypes = {
     theme: PropTypes.oneOf([

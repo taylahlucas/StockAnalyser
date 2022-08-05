@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware } from "redux"
-import thunk from "redux-thunk"
-import { composeWithDevTools } from "redux-devtools-extension"
-import { createWrapper } from "next-redux-wrapper"
-import company_reducer from "./reducers"
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { createWrapper } from 'next-redux-wrapper'
+import company_reducer from './reducers'
 
 // Initial states
 const initialState = {}

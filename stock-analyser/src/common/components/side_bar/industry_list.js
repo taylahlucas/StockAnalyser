@@ -1,26 +1,30 @@
-import React, { useState } from 'react'
-import { Collapse } from '@material-ui/core'
-
-import SectorList from './sector_list'
-import DropdownButton from '../buttons/dropdown_button'
-import AsxIndustryGroups from '../../data/asx_industry_groups'
-import AsxIndustryTitles from '../../data/asx_industry_titles'
-
+import React from 'react'
 import List from '@material-ui/core/List'
 
-export default function IndustryList() {
-    const [isOpen, setOpenMenu] = useState(false)
+import SectorDropDown from './sector_dropdown'
+import AsxIndustryGroups from '../../../utils/enums/asx_industry_groups'
+import AsxIndustryTitles from '../../../utils/enums/asx_industry_titles'
 
+export default function IndustryList() {
+    // Get list of sectors for each industry
+    const getSectorList = (industry) => {
+        var listItems = []
+        Object.entries(AsxIndustryGroups[industry]).map((sector) => {
+            listItems.push({ value: sector[0], name: sector[1] })
+        })
+        return listItems
+    }
+    
     return (
-        <List style={{ paddingTop: 10 }}>
-            {/* List of industry groups */}
-            {Object.keys(AsxIndustryGroups).map((item) => {                
-                return <div key={item} className='center paddingTop10'>
-                    <DropdownButton title={AsxIndustryTitles[item]} onClick={() => setOpenMenu(!isOpen)} />
-                    <Collapse in={isOpen}>
-                        <SectorList items={AsxIndustryGroups[item]} />
-                    </Collapse>
-                </div>
+        <List style={{ paddingTop: 20 }}>
+            {Object.keys(AsxIndustryGroups).map((item) => {            
+                return <SectorDropDown 
+                    key={item} 
+                    id={item}
+                    className='center paddingTop10'
+                    title={AsxIndustryTitles[item]}
+                    options={getSectorList(item)}
+                />
             })}
         </List>
     )

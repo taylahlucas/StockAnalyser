@@ -1,7 +1,7 @@
 import '../styles/global.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect } from 'react'
-import { useStore, wrapper } from '../redux/store';
+// import { useStore, wrapper } from '../utils/redux/store'
 
 
 function StockAnalyserApp({ Component, pageProps }) {

@@ -1,36 +1,33 @@
-import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
-import mockCompanies from '../../../data/asx_mock_company_data'
+import PropTypes from 'prop-types'
 import { List } from '@material-ui/core'
+import ThemedListItem from '../buttons/themed_list_item'
 
 const propTypes = {
-    item: PropTypes.object
+    items: PropTypes.array,
+    isOpen: PropTypes.bool
 }
-// https://stackoverflow.com/questions/60424844/do-i-need-to-run-npm-run-build-every-time-i-made-changes
-function CompanyList(props) {
-    const [companies, setCompanies] = useState([])
 
-    useEffect(() => {
-        const filteredCompanies = mockCompanies.filter((item) => {
-            if (item.sector == props.item) {
-                return item
-            }
-        })
-        setCompanies(filteredCompanies)
-    }, [])
+const defaultProps = {
+    isOpen: false
+}
 
+const CompanyList = (props) => {
     return(
         <List>
-            {/* List of companies in sector */}
-            {Object.values(companies).map((item) => {
-                // Add selectable button (customized TextField)
-                return <div key={item}>{item.companyName}</div>
+            {props.items.map((item) => {
+                return <ThemedListItem 
+                    key={item.asxCode}
+                    title={item.companyName}
+                />
             })}
         </List>
     )
 }
 
 CompanyList.propTypes = propTypes
+CompanyList.defaultProps = defaultProps
 
 export default CompanyList
+

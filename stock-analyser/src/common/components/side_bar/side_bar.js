@@ -3,8 +3,8 @@ import SearchBar from 'material-ui-search-bar'
 
 import ThemedButton from '../buttons/themed_button'
 import IndustryList from './industry_list'
-import AsxIndustryGroups from '../../data/asx_industry_groups'
-import mockCompanies from '../../data/asx_mock_company_data'
+import AsxIndustryGroups from '../../../utils/enums/asx_industry_titles'
+import mockCompanies from '../../../mock/asx_mock_company_data'
 
 export default function SideBar() {
     const [industries, setIndustries] = useState([])

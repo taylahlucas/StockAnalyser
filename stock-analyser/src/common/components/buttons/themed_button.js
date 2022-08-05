@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { CssBaseline } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
-import baseThemes from '../../styles/mui_themes'
+import baseThemes from '../../../styles/mui_themes'
 
 const propTypes = {
     title: PropTypes.string,

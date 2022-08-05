@@ -1,43 +1,39 @@
-import React, { useState } from 'react'
-
+import React, {  useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import { List, Collapse } from '@material-ui/core'
 
-import CompanyList from './company_list'
+import mockCompanies from '../../../mock/asx_mock_company_data'
+import CompanyDropDown from './company_dropdown'
 import ThemedListItem from '../buttons/themed_list_item'
+import { List } from '@material-ui/core'
+import SectorDropDown from './sector_dropdown'
 
 const propTypes = {
-    items: PropTypes.object,
-    isOpen: PropTypes.bool
+    items: PropTypes.array
 }
 
-const defaultProps = {
-    isOpen: false
-}
+// List of companies in sector
+function SectorList(props) {
+    const [filteredCompanies, setFilteredCompanies] = useState([])
 
-const SectorList = (props) => {
-    const [isOpen, setOpenMenu] = useState(false)
-    
+    const filterCompanies = (sector) => {
+        return mockCompanies.filter((company) => {
+            return company.sector == sector.name
+        })
+    }
+
     return(
         <List>
-            {/* List of sections in industry group */}
-            {Object.values(props.items).map((item) => {
-                return  <div key={item}>
-                    <ThemedListItem 
-                        title={item}
-                        onClick={() => setOpenMenu(!isOpen)}
-                    />
-                    {/* TODO: Need to only open selected component -- use ref? */}
-                    <Collapse in={isOpen}>
-                        <CompanyList item={item} />
-                    </Collapse>
-                </div>
+            {props.items.map((item) => {
+                return <CompanyDropDown
+                    key={item.value}
+                    title={item.name}
+                    options={filterCompanies(item)}
+                />
             })}
         </List>
     )
 }
 
 SectorList.propTypes = propTypes
-SectorList.defaultProps = defaultProps
 
 export default SectorList
