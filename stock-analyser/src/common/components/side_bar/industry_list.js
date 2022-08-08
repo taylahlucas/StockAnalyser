@@ -2,8 +2,8 @@ import React from 'react'
 import List from '@material-ui/core/List'
 
 import SectorDropDown from './sector_dropdown'
-import AsxIndustryGroups from '../../../utils/enums/asx_industry_groups'
-import AsxIndustryTitles from '../../../utils/enums/asx_industry_titles'
+import AsxIndustryGroups from '../../utils/enums/asx_industry_groups'
+import AsxIndustryTitles from '../../utils/enums/asx_industry_titles'
 
 export default function IndustryList() {
     // Get list of sectors for each industry

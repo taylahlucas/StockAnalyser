@@ -1,6 +1,9 @@
 # StockAnalyser-Frontend
 Frontend for StockAnalyser app built in React
 
+cd stock-analyser
+npm run dev
+
 
 # API Docs
 

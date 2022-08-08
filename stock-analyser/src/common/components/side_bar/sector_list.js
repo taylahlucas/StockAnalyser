@@ -1,11 +1,9 @@
-import React, {  useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import PropTypes from 'prop-types'
 
 import mockCompanies from '../../../mock/asx_mock_company_data'
 import CompanyDropDown from './company_dropdown'
-import ThemedListItem from '../buttons/themed_list_item'
 import { List } from '@material-ui/core'
-import SectorDropDown from './sector_dropdown'
 
 const propTypes = {
     items: PropTypes.array

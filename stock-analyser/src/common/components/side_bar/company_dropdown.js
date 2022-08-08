@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Collapse } from '@material-ui/core'
 
-import ThemedButton from '../buttons/themed_button'
 import ThemedListItem from '../buttons/themed_list_item'
 import CompanyList from './company_list'
 

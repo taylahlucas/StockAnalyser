@@ -3,7 +3,7 @@ import SearchBar from 'material-ui-search-bar'
 
 import ThemedButton from '../buttons/themed_button'
 import IndustryList from './industry_list'
-import AsxIndustryGroups from '../../../utils/enums/asx_industry_titles'
+import AsxIndustryGroups from '../../utils/enums/asx_industry_titles'
 import mockCompanies from '../../../mock/asx_mock_company_data'
 
 export default function SideBar() {
