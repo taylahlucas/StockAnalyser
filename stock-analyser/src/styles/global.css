@@ -1,10 +1,3 @@
-/* Font Faces */
-
-@font-face {
-  font-family: 'Avenir Next';
-  src: url("http://www.yoursite.com/fonts/Avenir_Next.otf"); /* File to be stored at your site */
-}
-
 /* Background Colors */
 
 .lightGreyBackground { background-color: #2F2A36; }
@@ -16,6 +9,7 @@
 /* Text Colors */
 
 .lightTextColour { color: #E9E9E9; }
+.midTextColor { color: #707070; }
 .darkTextColour { color: #727276; }
 
 /* Contrasting Colors */
@@ -28,21 +22,36 @@
 .fixed { position: fixed; }
 .center { text-align: center; }
 
+.flex { display: flex; }
+.flex-row { 
+  display: flex; 
+  flex-direction: row; 
+}
+.flex-column { 
+  display: flex; 
+  flex-direction: column; 
+}
+
 /* Widths & Heights */
 
 .height30 { height: 30px; }
 .height100p { height: 100%; }
 
 .width100 { width: 100px; }
+.width300 { width: 350px; }
 
 /* Padding */
 
 .paddingTop10 { padding-top: 10px; }
 .paddingTop20 { padding-top: 20px; }
-
 .paddingTop60 { padding-top: 60px; }
 
 .paddingLeft10 { padding-left: 10px; }
+.paddingLeft20 { padding-left: 20px; }
+
+.paddingRight20 { padding-right: 20px; }
+
+.padding30 { padding: 30px 30px 30px 30px; }
 
 /* Margin */
  
@@ -50,34 +59,30 @@
 /* Heading Styles */
 
 .heading {
-  font-family: 'Avenir Next';
+  font-family: 'Heebo', sans-serif;
   font-weight: bold;
   font-size: 50px;
 }
 
-.tableHeading {
-  font-family: 'Avenir Next';
-  font-weight: medium;
-  font-size: 20px; 
-}
-
 .tableCellText {
-  font-family: 'Avenir Next';
+  font-family: 'Heebo', sans-serif;
+  font-weight: lighter;
   font-size: 20px; 
+  text-align: center;
 }
 
 .sectionHeading {
-  font-family: 'Avenir Next';
+  font-family: 'Heebo', sans-serif;
   font-size: 16px; 
 }
 
 .smallHeading {
-  font-family: 'Avenir Next';
+  font-family: 'Heebo', sans-serif;
   font-size: 14px; 
 }
 
 .listCellText {
-  font-family: 'Avenir Next';
+  font-family: 'Heebo', sans-serif;
   font-size: 12px; 
 }
 
@@ -89,4 +94,29 @@
   padding-left: 10px;
   width: 350px;
   max-height: 30px;
+}
+
+#resultsTable {
+  overflow-x: auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+  z-index: -1;
+}
+
+#resultsTable tr:nth-child(even) { 
+  background-color: #707070;
+  opacity: 30%;
+  color: #EDFBFF
+}
+
+#resultsTable td, #ResultsTable th {
+  padding: 10px;
+}
+
+#tableHeading th {
+  font-family: 'Heebo', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  min-width: 100px;
 }

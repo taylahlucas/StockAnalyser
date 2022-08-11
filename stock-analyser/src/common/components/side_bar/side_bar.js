@@ -20,12 +20,8 @@ export default function SideBar() {
       }, [])
 
     return (
-        <div className='fixed height100p midGreyBackground'>
+        <div className='width300 height100p midGreyBackground'>
             <div className='container paddingTop20'>
-                <div className='row paddingLeft10'>
-                    <h1 className='heading lightTextColour'
-                        onClick={() => Router.push('/company_search')}>StockAnalyser.</h1>
-                </div>
                 <div className='row-sm-4 d-flex justify-content-center'>
                     <SearchBar className='searchBar'
                         placeholder='Search companies...'

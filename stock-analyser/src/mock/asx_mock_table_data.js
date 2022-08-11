@@ -1,4 +1,4 @@
-const mockData = [
+const mockTableData = [
     {
         asxCode: 'MGQ.AX',
         companyName: "MOQ Limited (MOQ.AX)",
@@ -55,4 +55,4 @@ const mockData = [
     }
 ]
 
-export default mockData
+export default mockTableData
