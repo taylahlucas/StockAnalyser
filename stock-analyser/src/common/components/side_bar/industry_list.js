@@ -21,7 +21,7 @@ export default function IndustryList() {
                 return <SectorDropDown 
                     key={item} 
                     id={item}
-                    className='center paddingTop10'
+                    className='text-center paddingTop10'
                     title={AsxIndustryTitles[item]}
                     options={getSectorList(item)}
                 />

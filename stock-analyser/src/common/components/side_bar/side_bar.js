@@ -4,11 +4,9 @@ import SearchBar from '../elements/search_bar'
 import DropdownButton from '../buttons/dropdown_button'
 import IndustryList from './industry_list'
 import AsxIndustryGroups from '../../utils/enums/asx_industry_titles'
-import mockCompanies from '../../../mock/asx_mock_company_data'
 
 export default function SideBar() {
     const [industries, setIndustries] = useState([])
-    const [companies, setCompanies] = useState(mockCompanies)
 
     // Set industries
     useEffect(() => {
@@ -34,9 +32,9 @@ export default function SideBar() {
                     <IndustryList industries={industries} />
                 </div>
                 {/* TODO: Add Companies Selected box */}
-                <div className='row-sm-4 d-flex justify-content-center paddingTop60 paddingBottom20'>
-                    <DropdownButton title='x companies selected'/>
-                </div>
+            </div>
+            <div className='relative row-sm-4 d-flex justify-content-center marginBottom'>
+                <DropdownButton title='x companies selected'/>
             </div>
         </div>
     )

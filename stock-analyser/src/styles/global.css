@@ -6,12 +6,6 @@
 
 .test { background-color: yellow; } 
 
-.screenBackground {
-  background-color: #14131A;
-  min-height: '4000px';
-  min-width: '4000px';
-}
-
 /* Text Colors */
 
 .lightTextColour { color: #E9E9E9; }
@@ -25,8 +19,9 @@
 
 /* Positions */
 
+.text-center { text-align: center; }
 .fixed { position: fixed; }
-.center { text-align: center; }
+.relative { position: sticky; }
 
 .flex { display: flex; }
 .flex-row { 
@@ -41,7 +36,7 @@
 /* Widths & Heights */
 
 .height30 { height: 30px; }
-.height100p { height: 100%; }
+.height100p { height: 100vh; }
 
 .width100 { width: 100px; }
 .width300 { width: 350px; }
@@ -57,13 +52,12 @@
 
 .paddingRight20 { padding-right: 20px; }
 
-.paddingBottom20 { padding-bottom: 30px; }
-
 .padding30 { padding: 30px 30px 30px 30px; }
 
 /* Margin */
- 
 
+.marginBottom { margin-top: 200px; }
+ 
 /* Heading Styles */
 
 .heading {

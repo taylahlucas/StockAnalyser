@@ -38,9 +38,18 @@ const baseTheme = createTheme({
         },
         MuiTextField: {
             root: {
-                width: '280px', 
+                width: '265px', 
                 height: '35px', 
                 backgroundColor: 'transparent'
+            }
+        },
+        MuiInput: {
+            'input': {
+                '&::placeholder': {
+                    fontFamily: 'Avenir Next',
+                    fontSize: 16,
+                    color: '#707070'
+                }
             }
         }
     }

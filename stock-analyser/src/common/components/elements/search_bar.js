@@ -8,7 +8,7 @@ const propTypes = {
 
 const SearchBar = (props) => {
     return (
-        <TextField id='standard-basic' label={props.placeholder} />
+        <TextField id='standard-basic' placeholder={props.placeholder} />
     ) 
 }
 
