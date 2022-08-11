@@ -6,6 +6,12 @@
 
 .test { background-color: yellow; } 
 
+.screenBackground {
+  background-color: #14131A;
+  min-height: '4000px';
+  min-width: '4000px';
+}
+
 /* Text Colors */
 
 .lightTextColour { color: #E9E9E9; }
@@ -51,6 +57,8 @@
 
 .paddingRight20 { padding-right: 20px; }
 
+.paddingBottom20 { padding-bottom: 30px; }
+
 .padding30 { padding: 30px 30px 30px 30px; }
 
 /* Margin */
@@ -87,14 +95,6 @@
 }
 
 /* Custom Component Styles */
-
-.searchBar {
-  margin-top: 50px;
-  padding-right: 10px;
-  padding-left: 10px;
-  width: 350px;
-  max-height: 30px;
-}
 
 #resultsTable {
   overflow-x: auto;

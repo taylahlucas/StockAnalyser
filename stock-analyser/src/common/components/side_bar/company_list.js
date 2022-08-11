@@ -2,7 +2,7 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 import { List } from '@material-ui/core'
-import ThemedListItem from '../buttons/themed_list_item'
+import DropdownListItem from '../buttons/dropdown_list_item'
 
 const propTypes = {
     items: PropTypes.array,
@@ -17,7 +17,7 @@ const CompanyList = (props) => {
     return(
         <List>
             {props.items.map((item) => {
-                return <ThemedListItem 
+                return <DropdownListItem 
                     key={item.asxCode}
                     title={item.companyName}
                 />

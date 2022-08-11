@@ -52,6 +52,87 @@ const mockTableData = [
                 { type: "REVENUE", value: "25,795", year: 2018 }
             ]
         }
+    },
+    {
+        asxCode: "ABC.AX",
+        companyName: "Mock Company",
+        date: "2021-03-29T21:22:40.008691Z",
+        financials: {
+            currentStockPrice: "7.55",
+            dilutedEPS: "0.37",
+            priceToBook: "4.05",
+            quarterlyRevenueGrowth: "4.20%",
+            returnOnEquity: "20.26%",
+            trailingPE: "20.63"
+        },
+        trends: {
+            epsTrend: [
+                { type: "EPS", value: "0.23", year: 2017 }, 
+                { type: "EPS", value: "0.45", year: 2018 }
+            ],
+            expensesTrend: [
+                { type: "EXPENSES", value: "10,258", year: 2017 }, 
+                { type: "EXPENSES", value: "25,795", year: 2018 }
+            ],
+            revenueTrend: [
+                { type: "REVENUE", value: "12,178", year: 2017 }, 
+                { type: "REVENUE", value: "27,795", year: 2018 }
+            ]
+        }
+    },
+    {
+        asxCode: "GGB.AX",
+        companyName: "Mock Company 2",
+        date: "2021-03-29T21:22:40.008691Z",
+        financials: {
+            currentStockPrice: "7.55",
+            dilutedEPS: "0.37",
+            priceToBook: "4.05",
+            quarterlyRevenueGrowth: "4.20%",
+            returnOnEquity: "20.26%",
+            trailingPE: "20.63"
+        },
+        trends: {
+            epsTrend: [
+                { type: "EPS", value: "0.23", year: 2017 }, 
+                { type: "EPS", value: "0.45", year: 2018 }
+            ],
+            expensesTrend: [
+                { type: "EXPENSES", value: "10,258", year: 2017 }, 
+                { type: "EXPENSES", value: "25,795", year: 2018 }
+            ],
+            revenueTrend: [
+                { type: "REVENUE", value: "12,178", year: 2017 }, 
+                { type: "REVENUE", value: "27,795", year: 2018 }
+            ]
+        }
+    },
+    {
+        asxCode: "CYX.AX",
+        companyName: "Mock Company 3",
+        date: "2021-03-29T21:22:40.008691Z",
+        financials: {
+            currentStockPrice: "7.55",
+            dilutedEPS: "0.37",
+            priceToBook: "4.05",
+            quarterlyRevenueGrowth: "4.20%",
+            returnOnEquity: "20.26%",
+            trailingPE: "20.63"
+        },
+        trends: {
+            epsTrend: [
+                { type: "EPS", value: "0.23", year: 2017 }, 
+                { type: "EPS", value: "0.45", year: 2018 }
+            ],
+            expensesTrend: [
+                { type: "EXPENSES", value: "10,258", year: 2017 }, 
+                { type: "EXPENSES", value: "25,795", year: 2018 }
+            ],
+            revenueTrend: [
+                { type: "REVENUE", value: "12,178", year: 2017 }, 
+                { type: "REVENUE", value: "27,795", year: 2018 }
+            ]
+        }
     }
 ]
 

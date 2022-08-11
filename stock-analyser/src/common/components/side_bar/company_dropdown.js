@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Collapse } from '@material-ui/core'
 
-import ThemedListItem from '../buttons/themed_list_item'
+import DropdownListItem from '../buttons/dropdown_list_item'
 import CompanyList from './company_list'
 
 const propTypes = {
@@ -44,7 +44,7 @@ const CompanyDropDown = React.forwardRef((props, ref) => {
     
     return (
         <div ref={ref} className={props.className}>
-            <ThemedListItem 
+            <DropdownListItem 
                 id={props.id}
                 key={props.id}
                 title={props.title}
