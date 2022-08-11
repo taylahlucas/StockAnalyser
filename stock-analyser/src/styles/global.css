@@ -41,6 +41,8 @@
 .width100 { width: 100px; }
 .width300 { width: 350px; }
 
+.width100p { width: 100vh; }
+
 /* Padding */
 
 .paddingTop10 { padding-top: 10px; }
@@ -107,7 +109,7 @@
 
 #tableHeading th {
   font-family: 'Heebo', sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 18px;
   text-align: center;
   min-width: 100px;
