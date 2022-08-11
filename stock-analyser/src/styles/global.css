@@ -98,9 +98,7 @@
 }
 
 #resultsTable tr:nth-child(even) { 
-  background-color: #707070;
-  opacity: 30%;
-  color: #EDFBFF
+  background-color: rgba(102, 105, 234, 0.20)
 }
 
 #resultsTable td, #ResultsTable th {

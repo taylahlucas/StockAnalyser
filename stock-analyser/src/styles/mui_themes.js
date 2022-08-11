@@ -45,8 +45,11 @@ const baseTheme = createTheme({
         },
         MuiInput: {
             'input': {
+                paddingLeft: '15px',
+                fontFamily: 'Avenir Next',
+                color: '#E9E9E9',
+                opacity: 0.6,
                 '&::placeholder': {
-                    fontFamily: 'Avenir Next',
                     fontSize: 16,
                     color: '#707070'
                 }

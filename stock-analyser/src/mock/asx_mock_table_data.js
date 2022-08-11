@@ -5,11 +5,22 @@ const mockTableData = [
         date: "2021-03-29T21:22:39.998999Z",
         financials: {
             currentStockPrice: "0.2000",
+            enterpriseValue: "-23.23B",
+            ebitda: "N/A",
+            bookValue: "77.50",
+            eps: "12.31",
             dilutedEPS: "-0.0700",
+            trailingPE: "14.33",
+            evRevenue: "-3.37",
             priceToBook: "3.03",
-            quarterlyRevenueGrowth: "9.10%",
+            priceToSales: "9.79",
+            profitMarign: "27.04%",
+            operatingMargin: "38.03%",
+            operatingCashFlow: "32.99B",
+            leveredCashFlow: "N/A",
             returnOnEquity: "-68.65%",
-            trailingPE: "N/A",
+            debtEquity: "N/A",
+            dividendPayout: "49.33%"
         },
         trends: {
             epsTrend: [
@@ -31,12 +42,23 @@ const mockTableData = [
         companyName: "1300SMILES Limited (ONT.AX)",
         date: "2021-03-29T21:22:40.008691Z",
         financials: {
-            currentStockPrice: "7.55",
-            dilutedEPS: "0.37",
-            priceToBook: "4.05",
-            quarterlyRevenueGrowth: "4.20%",
-            returnOnEquity: "20.26%",
-            trailingPE: "20.63"
+            currentStockPrice: "0.2000",
+            enterpriseValue: "-23.23B",
+            ebitda: "N/A",
+            bookValue: "77.50",
+            eps: "12.31",
+            dilutedEPS: "-0.0700",
+            trailingPE: "14.33",
+            evRevenue: "-3.37",
+            priceToBook: "3.03",
+            priceToSales: "9.79",
+            profitMarign: "27.04%",
+            operatingMargin: "38.03%",
+            operatingCashFlow: "32.99B",
+            leveredCashFlow: "N/A",
+            returnOnEquity: "-68.65%",
+            debtEquity: "N/A",
+            dividendPayout: "49.33%"
         },
         trends: {
             epsTrend: [
@@ -58,12 +80,23 @@ const mockTableData = [
         companyName: "Mock Company",
         date: "2021-03-29T21:22:40.008691Z",
         financials: {
-            currentStockPrice: "7.55",
-            dilutedEPS: "0.37",
-            priceToBook: "4.05",
-            quarterlyRevenueGrowth: "4.20%",
-            returnOnEquity: "20.26%",
-            trailingPE: "20.63"
+            currentStockPrice: "0.2000",
+            enterpriseValue: "-23.23B",
+            ebitda: "N/A",
+            bookValue: "77.50",
+            eps: "12.31",
+            dilutedEPS: "-0.0700",
+            trailingPE: "14.33",
+            evRevenue: "-3.37",
+            priceToBook: "3.03",
+            priceToSales: "9.79",
+            profitMarign: "27.04%",
+            operatingMargin: "38.03%",
+            operatingCashFlow: "32.99B",
+            leveredCashFlow: "N/A",
+            returnOnEquity: "-68.65%",
+            debtEquity: "N/A",
+            dividendPayout: "49.33%"
         },
         trends: {
             epsTrend: [
@@ -85,12 +118,25 @@ const mockTableData = [
         companyName: "Mock Company 2",
         date: "2021-03-29T21:22:40.008691Z",
         financials: {
-            currentStockPrice: "7.55",
-            dilutedEPS: "0.37",
-            priceToBook: "4.05",
-            quarterlyRevenueGrowth: "4.20%",
-            returnOnEquity: "20.26%",
-            trailingPE: "20.63"
+            currentStockPrice: "0.2000",
+            enterpriseValue: "-23.23B",
+            ebitda: "N/A",
+            bookValue: "77.50",
+            eps: "12.31",
+            bookValue: "77.50",
+            eps: "12.31",
+            dilutedEPS: "-0.0700",
+            trailingPE: "14.33",
+            evRevenue: "-3.37",
+            priceToBook: "3.03",
+            priceToSales: "9.79",
+            profitMarign: "27.04%",
+            operatingMargin: "38.03%",
+            operatingCashFlow: "32.99B",
+            leveredCashFlow: "N/A",
+            returnOnEquity: "-68.65%",
+            debtEquity: "N/A",
+            dividendPayout: "49.33%"
         },
         trends: {
             epsTrend: [
@@ -112,12 +158,23 @@ const mockTableData = [
         companyName: "Mock Company 3",
         date: "2021-03-29T21:22:40.008691Z",
         financials: {
-            currentStockPrice: "7.55",
-            dilutedEPS: "0.37",
-            priceToBook: "4.05",
-            quarterlyRevenueGrowth: "4.20%",
-            returnOnEquity: "20.26%",
-            trailingPE: "20.63"
+            currentStockPrice: "0.2000",
+            enterpriseValue: "-23.23B",
+            ebitda: "N/A",
+            bookValue: "77.50",
+            eps: "12.31",
+            dilutedEPS: "-0.0700",
+            trailingPE: "14.33",
+            evRevenue: "-3.37",
+            priceToBook: "3.03",
+            priceToSales: "9.79",
+            profitMarign: "27.04%",
+            operatingMargin: "38.03%",
+            operatingCashFlow: "32.99B",
+            leveredCashFlow: "N/A",
+            returnOnEquity: "-68.65%",
+            debtEquity: "N/A",
+            dividendPayout: "49.33%"
         },
         trends: {
             epsTrend: [
