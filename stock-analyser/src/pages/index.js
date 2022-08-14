@@ -1,4 +1,4 @@
-import Layout from '../common/components/layout'
+import Layout from '../components/common/layout'
 
 export default function Home() {
   // TODO: Must use dispatch with NextJS and Redux to prevent automatically

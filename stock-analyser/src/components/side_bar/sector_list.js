@@ -1,7 +1,7 @@
 import React, {  useState } from 'react'
 import PropTypes from 'prop-types'
 
-import mockCompanies from '../../../mock/asx_mock_company_data'
+import mockCompanies from '../../mock/asx_mock_company_data'
 import CompanyDropDown from './company_dropdown'
 import { List } from '@material-ui/core'
 

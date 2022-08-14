@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import SearchBar from '../elements/search_bar'
+import SearchBar from '../common/elements/search_bar'
 
-import DropdownButton from '../buttons/dropdown_button'
+import DropdownButton from '../common/buttons/dropdown_button'
 import IndustryList from './industry_list'
 import AsxIndustryGroups from '../../utils/enums/asx_industry_titles'
 

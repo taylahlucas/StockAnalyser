@@ -1,5 +1,5 @@
-import SideBar from '../../common/components/side_bar/side_bar'
-import ResultsTable from '../../common/components/results/results_table'
+import SideBar from '../side_bar/side_bar'
+import ResultsTable from '../results/results_table'
 
 const Layout = () => {
     return (

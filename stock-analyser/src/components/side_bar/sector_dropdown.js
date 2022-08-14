@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Collapse } from '@material-ui/core'
 
-import DropdownListItem from '../buttons/dropdown_list_item'
-import CompanyList from './company_list'
+import DropdownButton from '../common/buttons/dropdown_button'
+import SectorList from '../side_bar/sector_list'
 
 const propTypes = {
     id: PropTypes.string,
@@ -34,31 +34,31 @@ const defaultProps = {
     options: []
 }
 
-const CompanyDropDown = React.forwardRef((props, ref) => {
+const SectorDropDown = React.forwardRef((props, ref) => {
     const [isOpen, setOpenMenu] = useState(false)
 
     const targetOptions = (Array.isArray(props.options) ?
         props.options :
         (props.options || '').split('\n')
     )
-    
     return (
         <div ref={ref} className={props.className}>
-            <DropdownListItem 
-                id={props.id}
+            <DropdownButton 
                 key={props.id}
-                title={props.title}
-                onClick={() => setOpenMenu(!isOpen)} />
+                id={props.id}
+                title={props.title} 
+                variant={props.variant}
+                onClick={() => setOpenMenu(!isOpen)}
+            />
             <Collapse in={isOpen}>
-                <CompanyList items={targetOptions} />
-            </Collapse> 
-            
+                <SectorList items={targetOptions}/>
+            </Collapse>
         </div>
         
     )
 })
 
-CompanyDropDown.propTypes = propTypes
-CompanyDropDown.defaultProps = defaultProps
+SectorDropDown.propTypes = propTypes
+SectorDropDown.defaultProps = defaultProps
 
-export default CompanyDropDown
+export default SectorDropDown

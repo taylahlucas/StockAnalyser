@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import MetricsHelper from '../../utils/helpers'
-import mockTableData from '../../../mock/asx_mock_table_data'
+import mockTableData from '../../mock/asx_mock_table_data'
 
 const propTypes = {
     companyNames: PropTypes.arrayOf(
