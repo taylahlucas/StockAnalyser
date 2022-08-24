@@ -33,7 +33,7 @@ export default function SideBar() {
                 </div>
                 {/* TODO: Add Companies Selected box */}
             </div>
-            <div className='relative row-sm-4 d-flex justify-content-center marginBottom'>
+            <div className='relative row-sm-4 d-flex justify-content-center marginTop200'>
                 <DropdownButton title='x companies selected'/>
             </div>
         </div>

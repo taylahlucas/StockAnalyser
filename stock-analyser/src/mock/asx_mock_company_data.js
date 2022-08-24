@@ -6,6 +6,24 @@ const mockCompanies = [
         sector: 'Capital Goods'
     },
     {
+        asxCode: 'ABC.AX',
+        companyName: 'Test Company A',
+        industry: 'Industrials',
+        sector: 'Capital Goods'
+    },
+    {
+        asxCode: 'SDY.AX',
+        companyName: 'Test Company B',
+        industry: 'Industrials',
+        sector: 'Capital Goods'
+    },
+    {
+        asxCode: 'MGQ.AX',
+        companyName: 'Maquarie',
+        industry: 'Industrials',
+        sector: 'Capital Goods'
+    },
+    {
         asxCode: 'ONT.AX',
         companyName: 'Onasfd',
         industry: 'Financials',
