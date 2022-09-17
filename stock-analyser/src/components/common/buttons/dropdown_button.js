@@ -7,10 +7,6 @@ const propTypes = {
     onClick: PropTypes.func.isRequired
 }
 
-const defaultProps = {
-    title: ''
-}
-
 const DropdownButton = (props) => {
     return (
         <Button onClick={props.onClick}>{props.title}</Button>  
@@ -18,6 +14,5 @@ const DropdownButton = (props) => {
 }
 
 DropdownButton.propTypes = propTypes
-DropdownButton.defaultProps = defaultProps
 
 export default DropdownButton

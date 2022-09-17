@@ -32,12 +32,13 @@ function DropdownListItem(props) {
         default: 
             break
     }
-    console.log("CUSTOM THEME: ", customTheme)
+
     return (
-        <ThemeProvider theme={customTheme}>
-            <CssBaseline />
-            <ListItem button onClick={props.onClick}>{props.title}</ListItem>  
-        </ThemeProvider>
+        <ListItem button onClick={props.onClick}>{props.title}</ListItem>  
+        // <ThemeProvider theme={customTheme}>
+        //     <CssBaseline />
+        //     <ListItem button onClick={props.onClick}>{props.title}</ListItem>  
+        // </ThemeProvider>
     )
 }
 
