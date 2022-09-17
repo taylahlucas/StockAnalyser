@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import MetricsHelper from '../../utils/helpers/metrics'
-import mockTableData from '../../mock/asx_mock_table_data'
+import mockTableData from '../../data/mock/asx_mock_table_data'
 
 const horizontalLineStyle = { width: 70, marginLeft: 12, marginTop: 2, marginBottom: 2 }
 const propTypes = {

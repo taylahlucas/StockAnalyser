@@ -3,7 +3,8 @@ import SearchBar from '../common/elements/search_bar'
 
 import DropdownButton from '../common/buttons/dropdown_button'
 import IndustryList from './industry_list'
-import AsxIndustryGroups from '../../utils/enums/asx_industry_titles'
+import { SectorGroups } from '../../data/enums/sectors' 
+
 
 export default function SideBar() {
     const [industries, setIndustries] = useState([])
@@ -11,7 +12,7 @@ export default function SideBar() {
     // Set industries
     useEffect(() => {
         const industries = []
-        for (const [industry] of Object.entries(AsxIndustryGroups)) {
+        for (const [industry] of Object.entries(SectorGroups)) {
           industries.push(industry)
         }
         setIndustries(industries)

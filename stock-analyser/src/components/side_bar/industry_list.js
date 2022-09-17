@@ -1,15 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import List from '@mui/material/List'
 
 import SectorDropDown from './sector_dropdown'
-import AsxIndustryGroups from '../../utils/enums/asx_industry_groups'
-import AsxIndustryTitles from '../../utils/enums/asx_industry_titles'
+import { ParentSectors, SectorGroups } from '../../data/enums/sectors'
 
 export default function IndustryList() {
     // Get list of sectors for each industry
     const getSectorList = (industry) => {
         var listItems = []
-        Object.entries(AsxIndustryGroups[industry]).map((sector) => {
+        Object.entries(SectorGroups[industry]).map((sector) => {
             listItems.push({ value: sector[0], name: sector[1] })
         })
         return listItems
@@ -17,12 +16,12 @@ export default function IndustryList() {
     
     return (
         <List style={{ paddingTop: 20 }}>
-            {Object.keys(AsxIndustryGroups).map((item) => {            
+            {Object.keys(ParentSectors).map((item) => {            
                 return <SectorDropDown 
                     key={item} 
                     id={item}
                     className='text-center paddingTop10'
-                    title={AsxIndustryTitles[item]}
+                    title={ParentSectors[item]}
                     options={getSectorList(item)}
                 />
             })}
