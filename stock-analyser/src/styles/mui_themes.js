@@ -27,16 +27,17 @@ export const baseTheme = createTheme({
         MuiListItem: {
             styleOverrides: {
                 root: {
-                    width: 230,
                     minHeight: 30,
-                    marginLeft: 20,
                     background: '#727276',
                     // Label properties
                     fontFamily: 'Avenir Next',
                     fontSize: 10,
                     color: '#E9E9E9',
                     textTransform: 'uppercase',
-                    justifyContent: 'left'
+                    verticalAlign: 'middle',
+                    justifyContent: 'left',
+                    paddingTop: 10,
+                    paddingBottom: 10
                 }
             }
         },
@@ -64,26 +65,6 @@ export const baseTheme = createTheme({
             }
         }
     },
-})
-
-export const subItemTheme = createTheme({
-    ...baseTheme,
-    overrides: {
-        MuiListItem: {
-            root: {
-                width: 200,
-                minHeight: 30,
-                marginLeft: 50,
-                background: '#727276',
-                // Label properties
-                fontFamily: 'Avenir Next',
-                fontSize: 10,
-                color: '#E9E9E9',
-                textTransform: 'uppercase',
-                justifyContent: 'left'
-            }
-        }
-    }
 })
 
 export default createTheme(baseTheme)

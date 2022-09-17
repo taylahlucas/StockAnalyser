@@ -47,6 +47,7 @@ const CompanyDropDown = React.forwardRef((props, ref) => {
             <DropdownListItem 
                 id={props.id}
                 key={props.id}
+                style={{ width: 230, marginLeft: 20, marginTop: -7 }}
                 title={props.title}
                 onClick={() => setOpenMenu(!isOpen)} />
             <Collapse in={isOpen}>

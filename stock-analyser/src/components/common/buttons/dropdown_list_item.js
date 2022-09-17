@@ -3,7 +3,8 @@ import ListItem from '@mui/material/ListItem'
 
 const propTypes = {
     title: PropTypes.string,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    style: PropTypes.object
 }
 
 const defaultProps = {
@@ -13,7 +14,10 @@ const defaultProps = {
 // TODO: Style this to look like designs
 function DropdownListItem(props) {
     return (
-        <ListItem button onClick={props.onClick}>{props.title}</ListItem>  
+        <ListItem 
+            button 
+            onClick={props.onClick}
+            style={props.style}>{props.title}</ListItem>  
     )
 }
 

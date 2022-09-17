@@ -15,10 +15,11 @@ const defaultProps = {
 
 const CompanyList = (props) => {
     return(
-        <List>
+        <List style={{ marginTop: -8 }}>
             {props.items.map((item) => {
                 return <DropdownListItem 
                     key={item.asxCode}
+                    style={{ width: 200, marginLeft: 50, opacity: 0.6 }}
                     title={item.companyName}
                 />
             })}
