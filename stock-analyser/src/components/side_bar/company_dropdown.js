@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { Collapse } from '@mui/material'
+import Collapse from '@mui/material/Collapse'
 
 import DropdownListItem from '../common/buttons/dropdown_list_item'
 import CompanyList from './company_list'
@@ -60,6 +60,5 @@ const CompanyDropDown = React.forwardRef((props, ref) => {
 
 CompanyDropDown.propTypes = propTypes
 CompanyDropDown.defaultProps = defaultProps
-// CompanyDropDown.displayName = "CompanyDropDown"
 
 export default CompanyDropDown

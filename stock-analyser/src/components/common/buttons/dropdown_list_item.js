@@ -1,44 +1,19 @@
 import PropTypes from 'prop-types'
-import { ThemeProvider, CssBaseline, ListItem  } from '@mui/material'
-import { baseTheme, subItemTheme } from '../../../styles/mui_themes'
+import ListItem from '@mui/material/ListItem'
 
 const propTypes = {
     title: PropTypes.string,
-    variant: PropTypes.oneOf([
-        'standard',
-        'small'
-    ]),
     onClick: PropTypes.func
 }
 
 const defaultProps = {
     title: '',
-    variant: 'standard',
     onClick: undefined
 }
-
+// TODO: Style this to look like designs
 function DropdownListItem(props) {
-    let customTheme =  baseTheme
-
-    switch (props.variant) {
-        case 'small':
-            customTheme = subItemTheme
-            break
-
-        case 'standard':
-            customTheme = baseTheme
-            break
-             
-        default: 
-            break
-    }
-
     return (
         <ListItem button onClick={props.onClick}>{props.title}</ListItem>  
-        // <ThemeProvider theme={customTheme}>
-        //     <CssBaseline />
-        //     <ListItem button onClick={props.onClick}>{props.title}</ListItem>  
-        // </ThemeProvider>
     )
 }
 
