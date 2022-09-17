@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { ThemeProvider, CssBaseline, ListItem  } from '@material-ui/core'
+import { ThemeProvider, CssBaseline, ListItem  } from '@mui/material'
 import { baseTheme, subItemTheme } from '../../../styles/mui_themes'
 
 const propTypes = {

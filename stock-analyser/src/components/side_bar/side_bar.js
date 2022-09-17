@@ -17,6 +17,10 @@ export default function SideBar() {
         setIndustries(industries)
       }, [])
 
+    const openMenu = () => {
+
+    }
+
     return (
         <div className='width300 height100p midGreyBackground'>
             <div className='container paddingTop60'>
@@ -34,7 +38,7 @@ export default function SideBar() {
                 {/* TODO: Add Companies Selected box */}
             </div>
             <div className='relative row-sm-4 d-flex justify-content-center marginTop200'>
-                <DropdownButton title='x companies selected'/>
+                <DropdownButton title='x companies selected' onClick={() => openMenu()}/>
             </div>
         </div>
     )

@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types'
-import Button from '@material-ui/core/Button'
+import Button from '@mui/material/Button'
+
 
 const propTypes = {
     title: PropTypes.string,
-    onClick: PropTypes.func
+    onClick: PropTypes.func.isRequired
 }
 
 const defaultProps = {
-    title: '',
-    onClick: undefined
+    title: ''
 }
 
-function DropdownButton(props) {
+const DropdownButton = (props) => {
     return (
         <Button onClick={props.onClick}>{props.title}</Button>  
     )

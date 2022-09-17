@@ -2,7 +2,7 @@ import '../styles/global.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect } from 'react'
 // import { useStore, wrapper } from '../utils/redux/store'
-import { ThemeProvider, CssBaseline } from '@material-ui/core';
+import { ThemeProvider, CssBaseline } from '@mui/material'
 
 import baseTheme from '../styles/mui_themes'
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import mockCompanies from '../../mock/asx_mock_company_data'
 import CompanyDropDown from './company_dropdown'
-import { List } from '@material-ui/core'
+import List from '@mui/material/List'
 
 const propTypes = {
     items: PropTypes.array

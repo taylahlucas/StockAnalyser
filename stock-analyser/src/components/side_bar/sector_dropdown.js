@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { Collapse } from '@material-ui/core'
+import Collapse from '@mui/material/Collapse'
 
 import DropdownButton from '../common/buttons/dropdown_button'
 import SectorList from '../side_bar/sector_list'

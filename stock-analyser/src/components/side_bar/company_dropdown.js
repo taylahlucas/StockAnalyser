@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { Collapse } from '@material-ui/core'
+import { Collapse } from '@mui/material'
 
 import DropdownListItem from '../common/buttons/dropdown_list_item'
 import CompanyList from './company_list'
