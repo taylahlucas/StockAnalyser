@@ -25,17 +25,18 @@
 
 .flex { display: flex; }
 .flex-row { 
-  display: flex; 
+  display: flex;
   flex-direction: row; 
 }
 .flex-column { 
   display: flex; 
   flex-direction: column; 
 }
-
+.overflow-y-auto { overflow-y: auto; }
 /* Widths & Heights */
 
 .height30 { height: 30px; }
+.height400 { height: 400px; }
 .height100p { height: 100vh; }
 
 .width100 { width: 100px; }
@@ -58,7 +59,7 @@
 
 /* Margin */
 
-.marginBottom { margin-top: 200px; }
+.marginTop50 { margin-top: 50px; }
  
 /* Heading Styles */
 
