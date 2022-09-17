@@ -20,7 +20,7 @@ function SectorList(props) {
     }
 
     return(
-        <List>
+        <List style={{ marginTop: -7 }}>
             {props.items.map((item) => {
                 return <CompanyDropDown
                     key={item.value}
