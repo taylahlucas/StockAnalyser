@@ -2,6 +2,7 @@
 Frontend for StockAnalyser app built in React
 
 cd stock-analyser
+npm install
 npm run dev
 
 
