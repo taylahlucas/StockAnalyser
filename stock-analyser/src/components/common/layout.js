@@ -3,9 +3,9 @@ import ResultsTable from '../results/results_table'
 
 const Layout = () => {
     return (
-        <div className='flex-row screenBackground'>
+        <div className='flex-row'>
             <SideBar />
-            <div className='flex-column darkGreyBackground'>
+            <div className='flex-column'>
                 <h1 className='heading lightTextColour padding30'>StockAnalyser.</h1>
                 <ResultsTable />
             </div>

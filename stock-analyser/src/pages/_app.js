@@ -16,6 +16,7 @@ function StockAnalyserApp({ Component, pageProps }) {
   return (    
     <ThemeProvider theme={baseTheme}>
       <CssBaseline />
+      <style>{'body { background-color: #14131A }'}</style>
       <Component {...pageProps} />
     </ThemeProvider>
     )

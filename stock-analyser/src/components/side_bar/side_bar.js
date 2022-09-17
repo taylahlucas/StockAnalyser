@@ -17,13 +17,9 @@ export default function SideBar() {
         setIndustries(industries)
       }, [])
 
-    const openMenu = () => {
-
-    }
-
     return (
-        <div className='width300 height100p midGreyBackground'>
-            <div className='container paddingTop60'>
+        <div className='width300 midGreyBackground'>
+            <div className='container paddingTop60 height100p'>
                 <div className='row-sm-4 d-flex justify-content-center'>
                     <SearchBar
                         placeholder='Search companies...'
@@ -32,13 +28,13 @@ export default function SideBar() {
                         // disabled={showSelectedCompanies} 
                     />
                 </div>
-                <div className='row-sm-4 d-flex justify-content-center'>
+                <div className='row-sm-4 d-flex justify-content-center height400 overflow-y-auto'>
                     <IndustryList industries={industries} />
                 </div>
                 {/* TODO: Add Companies Selected box */}
-            </div>
-            <div className='relative row-sm-4 d-flex justify-content-center marginTop200'>
-                <DropdownButton title='x companies selected' onClick={() => openMenu()}/>
+                <div className='relative row-sm-4 d-flex justify-content-center marginTop50'>
+                    <DropdownButton title='x companies selected'/>
+                </div>
             </div>
         </div>
     )
