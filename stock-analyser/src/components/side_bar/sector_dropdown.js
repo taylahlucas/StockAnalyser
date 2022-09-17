@@ -60,5 +60,6 @@ const SectorDropDown = React.forwardRef((props, ref) => {
 
 SectorDropDown.propTypes = propTypes
 SectorDropDown.defaultProps = defaultProps
+// SectorDropDown.displayName = "SectorDropDown"
 
 export default SectorDropDown

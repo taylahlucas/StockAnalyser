@@ -1,6 +1,6 @@
-import { createTheme } from "@material-ui/core/styles";
+import { createTheme } from '@material-ui/core'
 
-const baseTheme = createTheme({
+export const baseTheme = {
     palette: {
         background: {
             default: '#14131A'
@@ -56,6 +56,26 @@ const baseTheme = createTheme({
             }
         }
     }
+}
+
+export const subItemTheme = createTheme({
+    ...baseTheme,
+    overrides: {
+        MuiListItem: {
+            root: {
+                width: 200,
+                minHeight: 30,
+                marginLeft: 50,
+                background: '#727276',
+                // Label properties
+                fontFamily: 'Avenir Next',
+                fontSize: 10,
+                color: '#E9E9E9',
+                textTransform: 'uppercase',
+                justifyContent: 'left'
+            }
+        }
+    }
 })
 
-export default baseTheme
+export default createTheme(baseTheme)
