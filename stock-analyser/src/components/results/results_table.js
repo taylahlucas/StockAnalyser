@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import MetricsHelper from '../../utils/helpers/metrics'
 import mockTableData from '../../mock/asx_mock_table_data'
 
+const horizontalLineStyle = { width: 70, marginLeft: 12, marginTop: 2, marginBottom: 2 }
 const propTypes = {
     companyNames: PropTypes.arrayOf(
         PropTypes.string
@@ -93,10 +94,10 @@ const ResultsTable = () => {
                             <th>DILUTED EPS</th>
                             <th>TRAILING<br />P/E</th>
                             <th>PEG</th>
-                            <th>EV/REVENUE</th>
-                            <th>EV/EBITDA</th>
-                            <th>P/B</th>
-                            <th>P/S</th>
+                            <th>EV<hr style={horizontalLineStyle}/>REVENUE</th>
+                            <th>EV<hr style={horizontalLineStyle} />EBITDA</th>
+                            <th>PRICE<hr style={horizontalLineStyle}/>BOOK</th>
+                            <th>PRICE<hr style={horizontalLineStyle}/>SALES</th>
                             <th>PROFIT<br />MARGIN</th>
                             <th>OPERATING<br />MARGIN</th>
                             <th>OPERATING<br />CASH FLOW</th>
