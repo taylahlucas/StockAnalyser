@@ -6,9 +6,15 @@ const propTypes = {
     placeholder: PropTypes.string
 }
 
-const SearchBar = (props) => {
+function SearchBar(props) {
     return (
-        <TextField id='standard-basic' placeholder={props.placeholder} />
+        <TextField 
+            id='standard-basic' 
+            placeholder={props.placeholder} 
+            style={{ width: 265, borderColor: 'purple' }}
+            variant='standard'
+            // TODO: Change border colour
+        />
     ) 
 }
 

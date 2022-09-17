@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material'
+import { red } from '@mui/material/colors'
 
 export const baseTheme = createTheme({
     palette: {
@@ -27,7 +28,6 @@ export const baseTheme = createTheme({
         MuiListItem: {
             styleOverrides: {
                 root: {
-                    minHeight: 30,
                     background: '#727276',
                     // Label properties
                     fontFamily: 'Avenir Next',
@@ -41,13 +41,14 @@ export const baseTheme = createTheme({
                 }
             }
         },
-        MuiTextField: {
+        MuiInputBase: {
             styleOverrides: {
-                root: {
-                    width: '265px', 
-                    height: '35px', 
-                    backgroundColor: 'transparent'
-                }
+                input: {
+                    fontFamily: 'Avenir Next',
+                    fontSize: 14,
+                    color: 'white',
+                    textTransform: 'uppercase',
+                },
             }
         },
         MuiInput: {

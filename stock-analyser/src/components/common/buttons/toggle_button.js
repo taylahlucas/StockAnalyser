@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ToggleButton = (props) => {
+function ToggleButton(props) {
     const [selected, setSelected] = useState(false)
     
     function handleClick() {
