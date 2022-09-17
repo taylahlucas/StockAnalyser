@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { ListItem  } from '@material-ui/core'
+import ListItem from '@mui/material/ListItem'
 
 const propTypes = {
     title: PropTypes.string,

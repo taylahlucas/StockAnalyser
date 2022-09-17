@@ -1,7 +1,7 @@
 import React from 'react'
 
 import PropTypes from 'prop-types'
-import { List } from '@material-ui/core'
+import List from '@mui/material/List'
 import DropdownListItem from '../common/buttons/dropdown_list_item'
 
 const propTypes = {
