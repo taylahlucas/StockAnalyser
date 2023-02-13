@@ -61,5 +61,6 @@ const CompanyDropDown = React.forwardRef((props, ref) => {
 
 CompanyDropDown.propTypes = propTypes
 CompanyDropDown.defaultProps = defaultProps
+CompanyDropDown.displayName = "Company Dropdown"
 
 export default CompanyDropDown
