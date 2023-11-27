@@ -10,8 +10,41 @@ Work In Progress - Current functionality includes:
 
 # Local Setup
 
+### Backend
+Initialise Project
+
+cd backend
+
+Activate virtual environment:
+    - source venv/bin/activate
+
+// TODO: Write deployment script
+While in virtual environment:
+    - pip3 install django
+    - pip3 install djangorestframework
+    - pip3 install django-cors-headers
+    - pip3 install psycopg2-binary
+    - pip3 install crochet
+    - pip3 install bs4
+    - pip3 install scrapy_djangoitem
+    - pip3 install scrapy-fake-useragent
+    - pip3 install Scrapy-UserAgents
+    - pip3 install yfinance
+
+To run project:
+
+- Open pGAdmin4 and run Database
+
+cd stock_analyser
+python3 ./manage.py makemigrations
+python3 ./manage.py migrate
+python3 ./manage.py runserver
+
+### Frontend
 cd stock-analyser
+
 npm run build
+
 npm run dev
 
 ## Tech Stack
