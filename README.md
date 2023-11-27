@@ -1,5 +1,8 @@
 # StockAnalyser-Frontend
-Frontend for StockAnalyser app built in React.
+
+#### 19th September 2022
+
+Frontend for StockAnalyser app built in React using JavaScript, NextJS, Redux, Material-U, CSS Grids, Python, Django & Scrapy.
 
 Work In Progress - Current functionality includes:
 - Displaying mock data for ASX companies in tabular format.
@@ -7,6 +10,7 @@ Work In Progress - Current functionality includes:
 
 * Search and company select functionality in progress *
 
+<img width="1503" alt="Screenshot 2023-11-27 at 3 46 19 pm" src="https://github.com/taylahlucas/StockAnalyser-Frontend/assets/53559103/d83fd2db-4d80-4334-baed-b6f956af294f">
 
 # Local Setup
 
@@ -47,10 +51,17 @@ npm run build
 
 npm run dev
 
-## Tech Stack
-
-Typscript, NextJS, Redux
-Material-UI, CSS Grids
+# Folder Structure
+- /backend - Backend scrapers which provide property and rental price data
+    - /scrapers - Individual data scrapers.
+- /src - Frontend application
+    - /components
+        - /custom - Custom components.
+        - /common - Resuable components.
+- /data - Data functions and mock data.
+- /pages - App screens.
+- /styles - General styles.
+- /utils - Constants, enums, types & interfaces.
 
 # Licence
 
