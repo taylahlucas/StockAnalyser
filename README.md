@@ -1,4 +1,4 @@
-# StockAnalyser-Frontend
+# StockAnalyser
 
 #### 19th September 2022
 
