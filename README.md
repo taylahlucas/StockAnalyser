@@ -3,6 +3,10 @@
 #### 19th September 2022
 
 StockAnalyser app built in React using JavaScript, NextJS, Redux, Material-U, CSS Grids, Python, Django & Scrapy.
+Features include:
+- Search for stocks in specific sectors throughout the AUS stock market.
+- Selects any number of stocks to compare statistics.
+- View a range of statistics, using colors to indicate how good or bad the metric value is. 
 
 Work In Progress - Current functionality includes:
 - Displaying mock data for ASX companies in tabular format.
