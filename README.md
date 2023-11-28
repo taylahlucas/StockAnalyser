@@ -2,7 +2,7 @@
 
 #### 19th September 2022
 
-Frontend for StockAnalyser app built in React using JavaScript, NextJS, Redux, Material-U, CSS Grids, Python, Django & Scrapy.
+StockAnalyser app built in React using JavaScript, NextJS, Redux, Material-U, CSS Grids, Python, Django & Scrapy.
 
 Work In Progress - Current functionality includes:
 - Displaying mock data for ASX companies in tabular format.
